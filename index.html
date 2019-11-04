@@ -7,103 +7,33 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>What the food?</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Alex+Brush|Mr+De+Haviland|Sacramento|Satisfy&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/618c2360bc.js"></script>
     <script src="script.js" defer></script>
 </head>
 
 <body>
     <header>
-        <nav>
-            <ul id="nav-bar">
-                <li><a class="fab fa-instagram" href="https://www.instagram.com/foody.vn/" target="#"></a></li>
-                <li><a class="fab fa-youtube" href="https://www.youtube.com/channel/UCJFp8uSYCjXOMnkUyb3CQ3Q"
-                        target="#"></a></li>
-                <li><a class="nav-content" href="/index.html">HOME</a></li>
-                <li><a class="nav-content" href="#news">MÓN ĂN NỔI BẬT</a></li>
-                <li><a class="nav-content" href="#contact">DANH MỤC CÔNG THỨC</a></li>
-                <li><a class="nav-content" href="#contact">GIỚI THIỆU</a></li>
-                <li style="float:right"><i class="fas fa-search"></i></li>
-                <li style="float:right"><input type="text" placeholder="Search"></li>
-            </ul>
-        </nav>
-        <hr>
-        <div style="text-align: center">
-            <a id="logo" href="/index.html">What the food?</a>
-        </div>
+        <div class="main">
+            <ul>
+                <li>
+                    <a class="fab fa-instagram" href="https://www.instagram.com/foody.vn/" target="#"></a>
+                </li>
+                <li>
+                    <a class="fab fa-youtube" href="https://www.youtube.com/channel/UCJFp8uSYCjXOMnkUyb3CQ3Q" target="#"></a>
+                </li>
+                <li><a class="nav-content" href="/index.html">Home</a></li>
+                <li><a class="nav-content" href="#news">Recipe</a></li>
+                <li><a class="nav-content" href="#contact">Intro</a></li>
 
-        <hr>
-        <div class="slideshow-container">
-            <div class="mySlides fade">
-                <img src="./pic/6.jpg">
-            </div>
-            <div class="mySlides fade">
-                <img src="./pic/7.jpg">
-            </div>
-
-            <div class="mySlides fade">
-                <img src="./pic/4.jpg">
-            </div>
-            <div class="mySlides fade">
-                <img src="./pic/3.jpg">
-            </div>
-            <div class="mySlides fade">
-                <img src="./pic/1.jpg">
-            </div>
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
-        <br>
-        <div style="text-align:center">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-            <span class="dot" onclick="currentSlide(4)"></span>
-            <span class="dot" onclick="currentSlide(5)"></span>
-        </div>
-        <hr>
+        <div class="title">
+            <h1>What the food?</h1>
+            <div class="form-box">
+                <input type="text" class="search-field food" placeholder="Search some food">
+                <button class="search-btn" type="button">Search</button>
+            </div>
     </header>
-    <div id="container">
-        <div id="content-wrap">
-            <div>
-                <aside class="sidebar">
-                    <div class="book">
-                        <h3>sach day nau an</h3>
-                        <nav>
-                            <ul id="nav-book">
-                                <li><img id="book-pic" src="/pic/books.jpg" alt="khi bep vang lo"></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </aside>
-            </div>
-            <div class="main-supporting">
-                <div class="recipe1">
-                    <a href="/kfc.html">Cách làm gà kfc
-                        <img src="./pic/kfc.jpg" alt="chickensoup"></a>
-                    <p> Công thức của món Gà chiên KFC này là công sức thử nghiệm trong nhiều tuần (chứ không phải nhiều
-                        ngày nha của đội SD tụi mình đấy ah.
-                        Lý do là nếu bạn Google thử, sẽ thấy cả tá công thức gà chiên giòn hay gà KFC khác nhau luôn,
-                        với rất nhiều các sự kết hợp mùi vị, và cả bí quyết làm sao để cho lớp bột giòn thật là giòn,
-                        trong khi thịt thì mềm và ngọt đậm đà. Nhưng cũng chính vì có quá nhiều tài liệu tham khảo như
-                        vậy, mà thời gian thử nghiệm món này của tụi mình cũng lâu hơn mức trung bình[...]</p>
-                </div>
-            </div>
-            
-        </div>
-    </div>
-    <footer id="footer-wrap">
-        <div id="footer-content">
-            <div id="tag">
-                <h3>Tag</h3>
-            </div>
-            <div id="highlight">
-                <h3>Mon an noi bat</h3>
-            </div>
-            <div id="team">
-                <h3>By H2 Team</h3>
-            </div>
-        </div>
-    </footer>
 </body>
 
 </html>
