@@ -8,12 +8,12 @@
     <title>What the food?</title>
     <link rel="stylesheet" href="meals.css">
     <script src="https://kit.fontawesome.com/618c2360bc.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Alex+Brush|Mr+De+Haviland|Sacramento|Satisfy&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alex+Brush|Mr+De+Haviland|Sacramento|Satisfy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <script src="meals.js" defer></script>
 </head>
 
-<body>
+<body >
     <header>
         <nav class="main">
             <ul>
@@ -35,35 +35,48 @@
 
     <div id="container">
         <div id="content-wrap">
-            <div class="main-supporting">
-                
+            <div class="main-supporting" id="navbar-example2">
                 <div class="food">
-                    <img src="./pic/breakfast.jpg" alt="breakfast" class="image">
+                    <img src="./pic/breakfast.jpg"  alt="breakfast" class="image">
                     <div class="meals">
-                        <a href="" class="text">BREAKFAST</a>
+                        <a href="#recommend-tab" onclick="showhide()" class="text">BREAKFAST</a>
                     </div>
                 </div>
                 <div class="food">
                     <img src="./pic/lunch3.jpg" alt="lunch" class="image">
                     <div class="meals">
-                        <a href="" class="text">LUNCH</a>
+                        <a href="#myDIV" onclick="showhide()" class="text">LUNCH</a>
                     </div>
                 </div>
                 <div class="food">
                     <img src="./pic/brunch1.jpg" alt="brunch" class="image">
                     <div class="meals">
-                        <a href="" class="text">BRUNCH</a>
+                        <a href="#myDIV" onclick="showhide()" class="text">BRUNCH</a>
                     </div>
                 </div>
                 <div class="food">
                     <img src="./pic/dinner.jpg" alt="dinner" class="image">
                     <div class="meals">
-                        <a href="" class="text">DINNER</a>
+                        <a href="#myDIV" onclick="showhide()" class="text">DINNER</a>
                     </div>
+                </div>
+                <div id = 'recommend-tab'>
+                    <div id = 'recommend-tab-title'>daokdwadkaw</div>
+                    <div id="myDIV">
+                        <div class="food-img" >
+                            <img src="./pic/thitcho.jpg"alt="">
+                        </div>
+                        <div  class="food-img" >
+                                <img src="./pic/pho.jpg" class="food-img" alt="">
+                        </div>
+                        <div class = 'food-img'>
+                                <img src="http://www.vietnam-recipes.com/wp-content/uploads/2019/01/B%C3%A1nh-cu%E1%BB%91n-Recipe-Vietnamese-Steamed-Rice-Rolls.jpg" class="food-img" alt="">
+                        </div>
+                     </div>
+                </div>
                 </div>
             </div>
         </div>
     </div>
 </body>
-
 </html>

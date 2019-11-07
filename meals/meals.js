@@ -1,7 +1,12 @@
-$(window).scroll(function() {
-    if ($(window).scrollTop() > 10) {
-        $('#navBar').addClass('floatingNav');
+function showhide() {
+    var x = document.getElementById("recommend-tab");
+    if (x.style.display === "block") {
+      x.style.display = "none";
     } else {
-        $('#navBar').removeClass('floatingNav');
+      x.style.display = "block";
     }
-});
+  }
+
+
+
+
