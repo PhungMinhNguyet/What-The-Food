@@ -34,7 +34,7 @@ ul li a {
     padding: 5px 20px;
     border: transparent;
     transition: 0.6s ease;
-    size: 5px;
+    size: 50px;
 }
 
 a.nav-content:hover {
@@ -48,15 +48,17 @@ a.nav-content:hover {
     font-family: 'Sacramento', cursive;
     font-family: 'Mr De Haviland', cursive;
     font-family: 'Alex Brush', cursive;
+    /* font-weight: normal; */
     margin: 2px;
     padding: 5px;
     line-height: 70px;
     width: 80%;
+    font-size: 70px;
     cursor: pointer;
 }
 
 .headerLogo h1 a {
-    font-size: 100px;
+    font-size: 120px;
     text-decoration: none;
     color: brown;
 }

@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-image: url(./pic/homepage.jpeg);
+    height: 100vh;
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
+}
+
+ul {
+    float: right;
+    list-style-type: none;
+    margin-top: 25px;
+}
+
+ul li {
+    display: inline-block;
+}
+
+ul li a {
+    text-decoration: none;
+    color: palevioletred;
+    padding: 5px 20px;
+    border: transparent;
+    transition: 0.6s ease;
+    size: 5px;
+}
+
+.title {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.title h1 {
+    padding: 0;
+    text-shadow: 2px 2px 0px #d5d5d5, 4px 4px 0px rgba(0, 0, 0, 0.2);
+    font-family: 'Satisfy', cursive;
+    font-family: 'Sacramento', cursive;
+    font-family: 'Mr De Haviland', cursive;
+    font-family: 'Alex Brush', cursive;
+    color: brown;
+    font-size: 100px;
+}
+
+a.fab.fa-youtube:hover {
+    background-color: palevioletred;
+    color: white;
+}
+
+a.nav-content:hover {
+    background-color: palevioletred;
+    color: white;
+}
+
+a.btn:hover {
+    background-color: palevioletred;
+    color: white;
+}
+
+.search-field {
+    height: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    outline: none;
+    width: 450px;
+}
+
+.search-btn {
+    height: 40px;
+    width: 60px;
+    background: white;
+    border: none;
+    color: black;
+    border-radius: 25px;
+}
+
+.search-btn:hover {
+    cursor: pointer;
+}
