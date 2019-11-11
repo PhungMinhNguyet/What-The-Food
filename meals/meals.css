@@ -19,7 +19,7 @@ body {
 .main {
     max-width: 1200px;
     margin: auto;
-    display: inline;
+   
 }
 
 ul {
@@ -67,7 +67,7 @@ a.nav-content:hover {
 }
 
 .headerLogo h1 a {
-    font-size: 120px;
+    font-size: 100px;
     text-decoration: none;
     color: brown;
 }
