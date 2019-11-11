@@ -12,7 +12,7 @@ body {
     margin: auto;
     display: inline;
 }
-ul {
+#nav-content {
     float: right;
     list-style-type: none;
     margin-top: 25px;
@@ -88,16 +88,25 @@ header{
     display: flex;
     flex-wrap: wrap;
     margin-top: 200px;
+    font-style: normal;
 }
 
 .main {
     flex: 70%;
     background-color: rgb(255, 195, 205) ;
     padding: 20px;
+    /* text-align: center; */
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 
 .main h1 {
     font-family: 'Abril Fatface', cursive;
+    font-size: 5rem;
+    text-decoration: underline;
+    margin: 1px;
+    text-align: center;
 }
 
 .side {
@@ -106,9 +115,79 @@ header{
     padding: 20px;
 }
 
+.img-container {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    margin: auto;
+}
+
 .recipe-img {
     background-color: #aaa;
     width: 100%;
+    margin: auto;
+    position: absolute;
 }
 
+.ingredient-list {
+    margin-top: 100px
+}
+
+.ingredient-list h2 {
+    text-align: center;
+}
+
+p {
+    text-align: start;
+}
 /* ============= */
+
+/* Comment */
+
+footer{
+    /* border: 1px solid black; */
+}
+
+.form-control {
+    width: 300px;
+    background: transparent;
+    border: 1px solid black;
+    border-bottom: 1px solid grey;
+    color: palevioletred;
+    font-size: 15px;
+    /* margin-bottom: 16px; */
+}
+input {
+    height: 40px;;
+}
+.button {
+    background: palevioletred;
+    border-color: transparent;
+    color: wheat;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-align: center;
+    height: 40px;
+    /* margin-top: 20px; */
+}
+
+.button:hover {
+    background-color: peru;
+    cursor: pointer;
+}
+@media only screen and (max-width: 700px){
+    .form-control {
+        font-size: 15px;
+    }
+    .button {
+        font-size: 15px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .button:hover {
+        font-size: 15px;
+        cursor: pointer;
+    }
+}
+/* ==================== */
