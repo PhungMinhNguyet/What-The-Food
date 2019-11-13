@@ -1,3 +1,11 @@
+var url = 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=52772';
+async function getFood() {
+    const connect = await fetch(url);
+    const data = await connect.json;
+    document.getElementById
+} 
+
+
 var listfood = `
 <article class='product' >
 <div class="img-container">
@@ -10,3 +18,4 @@ var listfood = `
 
 var detail = document.getElementById('list-food');
 detail.insertAdjacentHTML('beforeend',listfood);
+

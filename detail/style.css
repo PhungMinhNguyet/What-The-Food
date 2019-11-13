@@ -1,156 +1,235 @@
-    /* Header */
+/* Header */
+*{
+    box-sizing: border-box;
+}
+body {
+    background-image: url(homepage.jpeg);
+    padding: 0;
+    width: 1400px;
+    margin: auto;
+    background-size: cover;
+    background-position: contain;
+    background-attachment: fixed;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 3px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+    font-size: 10px;
+}
+
+.nav-bar{
+    max-width: 1200px;
+    margin: auto;
+    display: inline;
+}
+#nav-content {
+    float: right;
+    list-style-type: none;
+    margin-top: 25px;
+}
+
+ul li {
+    display: inline-block;
+}
+
+ul li a {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Sacramento', cursive;
+    font-family: 'Mr De Haviland', cursive;
+    font-family: 'Alex Brush', cursive;
+	font-weight: normal;
+    color: brown;
+    padding: 5px 20px;
+    transition: 0.6s ease;
+    font-size: 25px;
+}
+
+.headerLogo h1 { 
+	text-shadow: 2px 2px 0px #d5d5d5, 4px 4px 0px rgba(0, 0, 0, 0.2);
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Sacramento', cursive;
+    font-family: 'Mr De Haviland', cursive;
+    font-family: 'Alex Brush', cursive;
+	font-weight: normal;
+	line-height: 48px;
+    width: 80%;
+    cursor: pointer;
+}
+
+.headerLogo h1 a {
+    font-size: 100px;   
+    text-decoration: none;
+    color: brown;
+}
+a.fab.fa-instagram:hover{
+    background-color: brown;
+    color: white;
+}
+a.fab.fa-youtube:hover{
+    background-color:brown;
+    color: white;
+}
+
+.headerLogo{
+    text-align: center;
+    margin-top:30px;
+}
+
+header{
+    width:80%;
+    margin: auto;
+}
+
+.nav-icon {
+    width: 50%;
+    padding: 10px 20px;
+    background: blue;
+    text-align: right;
+    box-sizing: border-box;
+    color: white;
+    font-size: 30px;
+}
+
+/* ============= */
+
+/* Recipe detail */
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    font-style: normal;
     
-    * {
-        box-sizing: border-box;
-    }
-    
-    body {
-        margin: 0;
-        padding: 0;
-    }
-    
-    .nav-bar {
-        max-width: 1200px;
-        margin: auto;
-        display: inline;
-    }
-    
-    #nav-content {
-        float: right;
-        list-style-type: none;
-        margin-top: 25px;
-    }
-    
-    ul li {
-        display: inline-block;
-    }
-    
-    ul li a {
-        text-decoration: none;
-        color: brown;
-        padding: 5px 20px;
-        border: transparent;
-        transition: 0.6s ease;
-        size: 50px;
-    }
-    
-    .headerLogo h1 {
-        text-shadow: 2px 2px 0px #d5d5d5, 4px 4px 0px rgba(0, 0, 0, 0.2);
-        font-family: 'Satisfy', cursive;
-        font-family: 'Sacramento', cursive;
-        font-family: 'Mr De Haviland', cursive;
-        font-family: 'Alex Brush', cursive;
-        /* font-weight: normal; */
-        margin: 2px;
-        padding: 5px;
-        line-height: 70px;
-        width: 80%;
-        font-size: 70px;
-        cursor: pointer;
-    }
-    
-    .headerLogo h1 a {
-        font-size: 100px;
-        text-decoration: none;
-        color: brown;
-    }
-    
-    a.fab.fa-instagram:hover {
-        background-color: brown;
-        color: white;
-    }
-    
-    a.fab.fa-youtube:hover {
-        background-color: brown;
-        color: white;
-    }
-    
-    .headerLogo {
-        text-align: center;
-        margin-top: 30px;
-    }
-    
-    header {
-        width: 80%;
-        margin: auto;
-    }
-    
-    .nav-icon {
-        width: 50%;
-        padding: 10px 20px;
-        background: blue;
-        text-align: right;
-        box-sizing: border-box;
-        color: white;
-        font-size: 30px;
-    }
-    /* ============= */
-    /* Recipe detail */
-    
-    #container {
-        display: flex;
-        flex-wrap: wrap;
-        margin-top: 200px;
-        font-style: normal;
-    }
-    
-    .main {
-        flex: 70%;
-        background-color: rgb(255, 195, 205);
-        padding: 20px;
-        /* text-align: center; */
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-    }
-    
-    .main h1 {
-        font-family: 'Abril Fatface', cursive;
-        font-size: 5rem;
-        text-decoration: underline;
-        margin: 1px;
-        text-align: center;
-    }
-    
-    .side {
-        flex: 30%;
-        background-color: #f1f1f1;
-        padding: 20px;
-    }
-    
-    .img-container {
-        position: relative;
-        width: 500px;
-        height: 500px;
-        display: flex;
-        margin: auto;
-    }
-    
-    .recipe-img {
-        background-color: #aaa;
-        width: 100%;
-        margin: auto;
-        position: absolute;
-    }
-    
-    .ingredient-list {
-        margin-top: 100px
-    }
-    
-    .ingredient-list h2 {
-        text-align: center;
-    }
-    
-    p {
-        text-align: start;
-    }
-    /* ============= */
-    /* Comment */
-    /* 
+}
+
+.main {
+    flex: 70%;
+    /* background-color: rgb(255, 195, 205) ; */
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.main h1 {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 5rem;
+    text-decoration: underline;
+    margin: 1px;
+    text-align: center;
+}
+
+.comment-line img{
+    margin-top: 20px;    
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+    border: 0;
+    /* background-position: 0 0 !important; */
+}
+
+.comment-area {
+    margin-top: 20px;
+    margin-left: 10px;
+    background-color: rgba(192, 192, 192, 0.76);
+    padding: 7px;
+}
+
+.comment-author {
+    font-weight: bold;
+    display: inline-block;
+    font-size: 20px;
+    color: rgb(38, 214, 241);
+}
+
+.side {
+    flex:30%;
+    /* background-color: #f1f1f1; */
+    padding: 20px;
+}
+
+.img-container-main {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.img-container-side img {
+    width: 100%;
+}
+.recipe-img {
+    background-color: #aaa;
+    width: 100%;
+    margin: auto;
+    position: absolute;
+}
+
+.ingredient-list {
+    margin-top: 50px
+}
+
+.ingredient-list h2 {
+    text-align: center;
+}
+
+p {
+    text-align: start;
+}
+/* ============= */
+
+
+
 footer{
+    background-color: white;
+}
+
+
+/* Comment */
+.contact-form {
+    margin-top:50px;
+}
+
+.form-control {
+    width: 100%; 
+    background: white;
     border: 1px solid black;
-} */
-    
+    border-bottom: 1px solid grey;
+    color: palevioletred;
+    font-size: 15px;
+    /* margin-bottom: 16px; */
+}
+
+.form-control-name {
+    background-color: silver;
+}
+
+.form-control-cmt{
+    height: 150px;
+}
+
+.button {
+    background: #4267b2;
+    border-color: transparent;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-align: center;
+    height: 40px;
+}
+
+.button:hover {
+    background-color: peru;
+    cursor: pointer;
+}
+@media only screen and (max-width: 700px){
     .form-control {
         width: 300px;
         background: transparent;
@@ -181,6 +260,12 @@ footer{
         background-color: peru;
         cursor: pointer;
     }
+<<<<<<< HEAD
+}
+
+.comment-line
+/* ==================== */
+=======
     
     @media only screen and (max-width: 700px) {
         .form-control {
@@ -197,3 +282,4 @@ footer{
         }
     }
     /* ==================== */
+>>>>>>> 6c1b1079d375b66c23f1f19fd98a2a9cdb79e080
