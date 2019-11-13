@@ -1,7 +1,7 @@
 /// catch event mealsPage
 
 //Breakfast button
-
+let item = document.getElementById("myDIV");
 const btnBre = document.getElementById('breakfast');
 btnBre.addEventListener('click', urlBre);
 
@@ -18,9 +18,15 @@ async function urlBre() {
 function showBreakfast(dataBre) {
     let num = Math.floor(Math.random() * dataBre.meals.length);
     // re-eddit show detail
-    p.insertAdjacentHTML('beforeend', `<p> ${dataBre.meals[num].strMeal} </p><img src='${dataBre.meals[num].strMealThumb}'alt="breakfast">`);
+    item.insertAdjacentHTML('beforeend',
+        `<article class='product'>
+    <div class="food-img">
+        <img src="${ dataBre.meals[num].strMealThumb}" class='product-img' alt="">
+        <button class='detail-btn'>Detail</button>
+        <h3>${dataBre.meals[num].strMeal}</h3>
+    </div>
+  </article><div class="food-img">`);
     console.log(dataBre.meals[num].strMeal);
-
 }
 
 // Brunch button
@@ -41,7 +47,14 @@ async function urlBrunch() {
 function showBrunch(dataBrunch) {
     let num = Math.floor(Math.random() * dataBrunch.meals.length);
     // re-eddit show detail
-    p.insertAdjacentHTML('beforeend', `<p> ${dataBrunch.meals[num].strMeal} </p><img src='${dataBrunch.meals[num].strMealThumb}' alt="brunchPic">`);
+    item.insertAdjacentHTML('beforeend',
+        `<article class='product'>
+<div class="food-img">
+    <img src="${ dataBrunch.meals[num].strMealThumb}" class='product-img' alt="">
+    <button class='detail-btn'>Detail</button>
+    <h3>${dataBrunch.meals[num].strMeal}</h3>
+</div>
+</article>`);
     console.log(dataBrunch.meals[num].strMeal);
 
 }
@@ -97,7 +110,7 @@ function randomCategory(dataCategory) {
         categogyMeal2 = dataCategory.meals[position2].strCategory;
     }
 
-    console.log("rrrr", categogyMeal1, categogyMeal2, categogyMeal3, categogyMeal4);
+    // console.log("rrrr", categogyMeal1, categogyMeal2, categogyMeal3, categogyMeal4);
     urlLunch(categogyMeal1, categogyMeal2);
     urlDinner(categogyMeal3, categogyMeal4)
 }
@@ -110,25 +123,61 @@ async function urlLunch(categogyMeal1, categogyMeal2) {
     const dataLunch2 = await urlLunch2.json();
     const urlLunch3 = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${categogyMeal2}`)
     const dataLunch3 = await urlLunch3.json();
-    console.log(dataLunch1, dataLunch2, dataLunch3);
+    // console.log(dataLunch1, dataLunch2, dataLunch3);
 
     showLunch(dataLunch1, dataLunch2, dataLunch3);
 
 }
 
 function showLunch(dataLunch1, dataLunch2, dataLunch3) {
+    let itemList = [];
     let num1 = Math.floor(Math.random() * dataLunch1.meals.length);
     let num2 = Math.floor(Math.random() * dataLunch2.meals.length);
     let num3 = Math.floor(Math.random() * dataLunch3.meals.length);
+    itemList.push(dataLunch1.meals[num1].strMeal);
+    itemList.push(dataLunch2.meals[num2].strMeal);
+    itemList.push(dataLunch3.meals[num3].strMeal);
     // re-eddit show detail
-    // p.insertAdjacentHTML('beforeend', `<p> ${dataLunch1.meals[num1].strMeal} </p><img src='${dataLunch1.meals[num1].strMealThumb}' alt="lunchPic1">`);
-    // p.insertAdjacentHTML('beforeend', `<p> ${dataLunch2.meals[num2].strMeal} </p><img src='${dataLunch2.meals[num2].strMealThumb}' alt="lunchPic2">`);
-    // p.insertAdjacentHTML('beforeend', `<p> ${dataLunch3.meals[num3].strMeal} </p><img src='${dataLunch3.meals[num3].strMealThumb}' alt="lunchPic3">`);
+    //     for (let i = 0; i < itemList.length; i++) {
+    //         item.insertAdjacentHTML('beforeend',
+    //             `<article class='product'>
+    //  <div class="food-img">
+    //     <img src="${ dataLunch.meals[i].strMealThumb}" class='product-img' alt="${i+1}">
+    //     <button class='detail-btn'>Detail</button>
+    //     <h3>${dataLunch.meals[i].strMeal}</h3>
+    // </div>
+    //       </article>`);
+    //     }
 
-    console.log(dataLunch1.meals[num1].strMeal);
-    console.log(dataLunch2.meals[num2].strMeal);
-    console.log(dataLunch3.meals[num3].strMeal);
+    item.insertAdjacentHTML('beforeend',
+        `<article class='product'>
+<div class="food-img">
+<img src="${ dataLunch1.meals[num1].strMealThumb}" class='product-img' alt="1">
+<button class='detail-btn'>Detail</button>
+<h3>${dataLunch1.meals[num1].strMeal}</h3>
+</div>
+</article>`);
+    item.insertAdjacentHTML('beforeend',
+        `<article class='product'>
+<div class="food-img">
+<img src="${ dataLunch2.meals[num2].strMealThumb}" class='product-img' alt="2">
+<button class='detail-btn'>Detail</button>
+<h3>${dataLunch2.meals[num2].strMeal}</h3>
+</div>
+</article>`);
+    item.insertAdjacentHTML('beforeend',
+        `<article class='product'>
+<div class="food-img">
+<img src="${ dataLunch3.meals[num3].strMealThumb}" class='product-img' alt="3">
+<button class='detail-btn'>Detail</button>
+<h3>${dataLunch3.meals[num3].strMeal}</h3>
+</div>
+</article>`);
+
+    console.log("List ", itemList);
+
 }
+showLunch();
 
 // Dinner
 // Dinner button
@@ -156,13 +205,34 @@ function showDinner(dataDinner1, dataDinner2, dataDinner3) {
     let num2 = Math.floor(Math.random() * dataDinner2.meals.length);
     let num3 = Math.floor(Math.random() * dataDinner3.meals.length);
     // re-eddit show detail
-    // p.insertAdjacentHTML('beforeend', `<p> ${dataDinner1.meals[num1].strMeal} </p><img src='${dataDinner1.meals[num1].strMealThumb}' alt="lunchPic1">`);
-    // p.insertAdjacentHTML('beforeend', `<p> ${dataDinner2.meals[num2].strMeal} </p><img src='${dataDinner2.meals[num2].strMealThumb}' alt="lunchPic2">`);
-    // p.insertAdjacentHTML('beforeend', `<p> ${dataDinner3.meals[num3].strMeal} </p><img src='${dataDinner3.meals[num3].strMealThumb}' alt="lunchPic3">`);
 
-    console.log(dataDinner1.meals[num1].strMeal);
-    console.log(dataDinner2.meals[num2].strMeal);
-    console.log(dataDinner3.meals[num3].strMeal);
+    item.insertAdjacentHTML('beforeend',
+        `<article class='product'>
+<div class="food-img">
+<img src="${ dataDinner1.meals[num1].strMealThumb}" class='product-img' alt="1">
+<button class='detail-btn'>Detail</button>
+<h3>${dataDinner1.meals[num1].strMeal}</h3>
+</div>
+</article>`);
+    item.insertAdjacentHTML('beforeend',
+        `<article class='product'>
+<div class="food-img">
+<img src="${ dataDinner2.meals[num2].strMealThumb}" class='product-img' alt="2">
+<button class='detail-btn'>Detail</button>
+<h3>${dataDinner2.meals[num2].strMeal}</h3>
+</div>
+</article>`);
+    item.insertAdjacentHTML('beforeend',
+        `<article class='product'>
+<div class="food-img">
+<img src="${ dataDinner3.meals[num3].strMealThumb}" class='product-img' alt="3">
+<button class='detail-btn'>Detail</button>
+<h3>${dataDinner3.meals[num3].strMeal}</h3>
+</div>
+</article>`);
+
+    console.log("List ", itemList);
+
 
 
 }
