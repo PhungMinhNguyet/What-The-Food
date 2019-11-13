@@ -2,6 +2,7 @@
 
 //Breakfast button
 let item = document.getElementById("myDIV");
+
 const btnBre = document.getElementById('breakfast');
 btnBre.addEventListener('click', urlBre);
 
@@ -12,21 +13,30 @@ async function urlBre() {
     console.log(dataBre);
 
     showBreakfast(dataBre);
-
+    //     item.textContent = " ";
 }
 
 function showBreakfast(dataBre) {
+
     let num = Math.floor(Math.random() * dataBre.meals.length);
     // re-eddit show detail
+    let itemM = item.getElementsByClassName('product');
+    console.log(itemM);
+
+    if (itemM.length >= 1) {
+        item.innerHTML = '';
+    }
+
     item.insertAdjacentHTML('beforeend',
         `<article class='product'>
-    <div class="food-img">
-        <img src="${ dataBre.meals[num].strMealThumb}" class='product-img' alt="">
-        <button class='detail-btn'>Detail</button>
-        <h3>${dataBre.meals[num].strMeal}</h3>
-    </div>
-  </article><div class="food-img">`);
-    console.log(dataBre.meals[num].strMeal);
+<div class="food-img">
+<img src="${ dataBre.meals[num].strMealThumb}" class='product-img' alt="">
+<button class='detail-btn'>Detail</button>
+<h3>${dataBre.meals[num].strMeal}</h3>
+</div>
+</article>`);
+
+
 }
 
 // Brunch button
@@ -130,6 +140,7 @@ async function urlLunch(categogyMeal1, categogyMeal2) {
 }
 
 function showLunch(dataLunch1, dataLunch2, dataLunch3) {
+
     let itemList = [];
     let num1 = Math.floor(Math.random() * dataLunch1.meals.length);
     let num2 = Math.floor(Math.random() * dataLunch2.meals.length);

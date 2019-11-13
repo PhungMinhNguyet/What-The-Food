@@ -77,6 +77,39 @@ a.fab.fa-youtube:hover {
     color: white;
 }
 
+
+/* ---------- */
+
+.product {
+    position: relative;
+    text-align: center;
+    /* margin: 20px; */
+}
+
+.img-container {
+    position: relative;
+    overflow: hidden;
+    transition-duration: 150ms;
+    cursor: pointer;
+    transition: all .3 linear;
+}
+
+.img-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 15px;
+}
+
+.img-container:hover .detail-btn {
+    transform: translateX(0);
+}
+
+.img-container:hover .product-img {
+    transform: scale(1.2);
+}
+
+
+/* ----------- */
+
 .headerLogo {
     text-align: center;
     margin-top: 30px;
