@@ -1,7 +1,14 @@
-/* Header */
-body {
+* {
     margin: 0;
     padding: 0;
+    font: "Segoe UI Semibold";
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
     background-image: url(homepage.jpeg);
     height: 100%;
     background-position: center;
@@ -9,11 +16,12 @@ body {
     background-size: cover;
 }
 
-.main{
+
+/* .main {
     max-width: 1200px;
     margin: auto;
-    display: inline;
-}
+} */
+
 ul {
     float: right;
     list-style-type: none;
@@ -26,50 +34,56 @@ ul li {
 
 ul li a {
     text-decoration: none;
-    font-family: 'Roboto', sans-serif;
-    font-family: 'Sacramento', cursive;
-    font-family: 'Mr De Haviland', cursive;
-    font-family: 'Alex Brush', cursive;
-	font-weight: normal;
     color: brown;
     padding: 5px 20px;
+    border: transparent;
     transition: 0.6s ease;
-    font-size: 25px;
+    size: 50px;
 }
 
-.headerLogo h1 { 
-	text-shadow: 2px 2px 0px #d5d5d5, 4px 4px 0px rgba(0, 0, 0, 0.2);
-    font-family: 'Roboto', sans-serif;
+a.nav-content:hover {
+    background-color: brown;
+    color: white;
+}
+
+.headerLogo h1 {
+    text-shadow: 2px 2px 0px #d5d5d5, 4px 4px 0px rgba(0, 0, 0, 0.2);
+    font-family: 'Satisfy', cursive;
     font-family: 'Sacramento', cursive;
     font-family: 'Mr De Haviland', cursive;
     font-family: 'Alex Brush', cursive;
-	font-weight: normal;
-	line-height: 48px;
+    /* font-weight: normal; */
+    margin: 2px;
+    padding: 5px;
+    line-height: 70px;
     width: 80%;
+    font-size: 70px;
     cursor: pointer;
 }
 
 .headerLogo h1 a {
-    font-size: 100px;   
+    font-size: 100px;
     text-decoration: none;
     color: brown;
 }
-a.fab.fa-instagram:hover{
+
+a.fab.fa-instagram:hover {
     background-color: brown;
     color: white;
 }
-a.fab.fa-youtube:hover{
-    background-color:brown;
+
+a.fab.fa-youtube:hover {
+    background-color: brown;
     color: white;
 }
 
-.headerLogo{
+.headerLogo {
     text-align: center;
-    margin-top:30px;
+    margin-top: 30px;
 }
 
-header{
-    width:80%;
+header {
+    width: 80%;
     margin: auto;
 }
 
@@ -83,9 +97,12 @@ header{
     font-size: 30px;
 }
 
+
 /* ============= */
 
+
 /* Product */
+
 .recipe-list {
     padding: 4rem 0;
 }
@@ -94,13 +111,13 @@ header{
     text-align: center;
     font-size: 5rem;
     margin-bottom: 5rem;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
 }
 
 .product-center {
     width: 90vw;
     margin: 0 auto;
-    max-width:  1170px;
+    max-width: 1170px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
     grid-column-gap: 3rem;
@@ -120,7 +137,7 @@ header{
     overflow: hidden;
     transition-duration: 150ms;
     cursor: pointer;
-    transition:  all .3 linear;
+    transition: all .3 linear;
 }
 
 .img-container:hover {
@@ -132,16 +149,16 @@ header{
     transform: translateX(0);
 }
 
-.img-container:hover .product-img{
+.img-container:hover .product-img {
     transform: scale(1.2);
 }
+
 .product-img {
     display: block;
     width: 100%;
     transition: 1s
     /* margin: 0 auto; */
 }
-
 
 .detail-btn {
     position: absolute;
@@ -150,11 +167,11 @@ header{
     background: white;
     border: none;
     text-transform: uppercase;
-    padding: 0.3rem 0.45rem;    
+    padding: 0.3rem 0.45rem;
     font-weight: bold;
     font-size: 1.2rem;
     transition: all 250ms ease;
-    transform: translateX(101%);    
+    transform: translateX(101%);
     cursor: pointer;
 }
 
@@ -167,8 +184,9 @@ header{
     text-transform: capitalize;
     font-size: 2rem;
     margin-top: 2rem;
-    text-align: center;      
-    background: white;                                                                                                                                                                                                                                                                                                                       
+    text-align: center;
+    background: white;
 }
-/* ==================================== */
 
+
+/* ==================================== */
