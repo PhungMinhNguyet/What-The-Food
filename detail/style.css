@@ -3,8 +3,23 @@
     box-sizing: border-box;
 }
 body {
-    margin: 0;
+    background-image: url(homepage.jpeg);
     padding: 0;
+    width: 1400px;
+    margin: auto;
+    background-size: cover;
+    background-position: contain;
+    background-attachment: fixed;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 3px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+    font-size: 10px;
 }
 
 .nav-bar{
@@ -87,15 +102,15 @@ header{
 #container {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 200px;
+    margin-top: 50px;
     font-style: normal;
+    
 }
 
 .main {
     flex: 70%;
-    background-color: rgb(255, 195, 205) ;
+    /* background-color: rgb(255, 195, 205) ; */
     padding: 20px;
-    /* text-align: center; */
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -109,20 +124,47 @@ header{
     text-align: center;
 }
 
+.comment-line img{
+    margin-top: 20px;    
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+    border: 0;
+    /* background-position: 0 0 !important; */
+}
+
+.comment-area {
+    margin-top: 20px;
+    margin-left: 10px;
+    background-color: rgba(192, 192, 192, 0.76);
+    padding: 7px;
+}
+
+.comment-author {
+    font-weight: bold;
+    display: inline-block;
+    font-size: 20px;
+    color: rgb(38, 214, 241);
+}
+
 .side {
     flex:30%;
-    background-color: #f1f1f1;
+    /* background-color: #f1f1f1; */
     padding: 20px;
 }
 
-.img-container {
+.img-container-main {
     position: relative;
     width: 500px;
     height: 500px;
     display: flex;
     margin: auto;
+    margin-bottom: 50px;
 }
 
+.img-container-side img {
+    width: 100%;
+}
 .recipe-img {
     background-color: #aaa;
     width: 100%;
@@ -131,7 +173,7 @@ header{
 }
 
 .ingredient-list {
-    margin-top: 100px
+    margin-top: 50px
 }
 
 .ingredient-list h2 {
@@ -143,33 +185,44 @@ p {
 }
 /* ============= */
 
-/* Comment */
+
 
 footer{
-    /* border: 1px solid black; */
+    background-color: white;
+}
+
+
+/* Comment */
+.contact-form {
+    margin-top:50px;
 }
 
 .form-control {
-    width: 300px;
-    background: transparent;
+    width: 100%; 
+    background: white;
     border: 1px solid black;
     border-bottom: 1px solid grey;
     color: palevioletred;
     font-size: 15px;
     /* margin-bottom: 16px; */
 }
-input {
-    height: 40px;;
+
+.form-control-name {
+    background-color: silver;
 }
+
+.form-control-cmt{
+    height: 150px;
+}
+
 .button {
-    background: palevioletred;
+    background: #4267b2;
     border-color: transparent;
-    color: wheat;
+    color: white;
     font-weight: bold;
     letter-spacing: 2px;
     text-align: center;
     height: 40px;
-    /* margin-top: 20px; */
 }
 
 .button:hover {
@@ -190,4 +243,6 @@ input {
         cursor: pointer;
     }
 }
+
+.comment-line
 /* ==================== */

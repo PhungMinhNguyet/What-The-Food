@@ -29,12 +29,15 @@
         </div>
         <!--=================-->
     </header>
+    <hr>
     <var id="container">
         <div class='main'>
+              
             <h1>Gà tây</h1>
-            <div class="img-container" >
+            <div class="img-container-main" >
                 <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-190917-turkey-cheeseball-0042-landscape-pf-1569877666.jpg?crop=0.668xw:1.00xh;0.170xw,0&resize=980:*" class='recipe-img' alt="">
             </div>  
+            <hr>
             <div class='ingredient-list'>
                 <h2>Ingredients</h2>
                 <ol style="list-style-type:disc;">
@@ -45,21 +48,41 @@
             </div>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci repellat et veritatis, eligendi reprehenderit quam consequuntur rem at numquam blanditiis delectus cum unde iste commodi cupiditate accusantium modi! Iste, sit.</p>
             <h2>Method</h2>
+            <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi, placeat aspernatur. Commodi libero consequuntur dolor laudantium harum neque ipsam necessitatibus? Eum, veritatis pariatur placeat illum laborum explicabo porro sit aspernatur?</div>
+            <hr>
+            <!-- Comment -->
+            <div class="contact-form">
+                <textarea name="name" type="name" class="form-control form-control-name" placeholder="Your name" required></textarea>
+                <form action="contact-form" method="post"></form>
+                <textarea name="comment" type="text" class="form-control form-control-cmt" placeholder="Your comment"></textarea>
+                <br>
+                <input type="button" class="form-control button" value="SEND">
+            </div>
+            <div class='comment-line' style="display: flex;">
+                <img src="https://petto.vn/wp-content/uploads/2019/07/nhung-hanh-dong-la-lung-ma-loai-cho-thuong-lam.jpg" alt="">
+                <div class='comment-area'>
+                    <div class="comment-author">Name</div>
+                    <div class = 'comment-text'>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae explicabo possimus dolorum molestiae similique placeat asperiores non, harum modi libero ipsum, omnis dignissimos minima ipsam illo fugiat quibusdam architecto iste!</p>
+                    </div>
+                </div>
+            </div>
+            <!-- ================ -->
         </div>
     <div class="side">
         <h2>Side</h2>
-        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. In veritatis amet nihil deserunt! Accusantium atque illo sunt quasi sint magni ipsum praesentium quaerat commodi assumenda alias amet repellat, provident ratione.</div>
+        <div class='img-container-side'>
+            <img src="https://cdn-image.myrecipes.com/sites/default/files/styles/4_3_horizontal_-_1200x900/public/mrtrending0475.jpg?itok=ULkGk3Pn" alt="" >
+            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. In veritatis amet nihil deserunt! Accusantium atque illo sunt quasi sint magni ipsum praesentium quaerat commodi assumenda alias amet repellat, provident ratione.</div>
+            <img src="https://cafedelites.com/wp-content/uploads/2018/05/Jambalaya-IMAGE-54.jpg" alt="">
+        </div>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. In veritatis amet nihil deserunt! Accusantium atque illo sunt quasi sint magni ipsum praesentium quaerat commodi assumenda alias amet repellat, provident ratione.
+        </div>
     </div>
     </var>
+    <hr>
     <footer>
-            <div class="contact-form">
-                    <form action="contact-form" method="post"></form>
-                    <input name="comment" type="text" class="form-control" placeholder="Your comment">
-                    <br>
-                    <input name="name" type="name" class="form-control" placeholder="Your name" required>
-                    <br>
-                    <input type="button" class="form-control button" value="SEND">
-                </div>
+        
     </footer>
 </body>
 </html>
