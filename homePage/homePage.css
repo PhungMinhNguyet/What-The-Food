@@ -96,19 +96,56 @@ a.btn:hover {
     background-color: palevioletred;
     color: white;
 }
-@media only screen and (max-width: 700px){
-    .title h1{
-        font-size: 55px;
+
+.loader {
+    border: 16px solid #f3f3f3;
+    /* Light grey */
+    border-top: 16px solid palevioletred;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#loader_container {
+    height: 500%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 700px) {
+    .title h1 {
+        font-size: 40px;
         cursor: pointer;
+        top: 40%;
+        margin-top: 25px;
         text-align: center;
     }
-    ul{
-        text-align: center;
-        margin-right: 20px;
+    .btn {
+        padding: 5px 5px;
+        font-size: 17px;
     }
-   .btn{
-       padding: 5px 25px;
-       font-size: 17px;
-       
+    .main {
+        max-width: 1500px;
+        margin: auto;
+    }
+    ul li a {
+        text-decoration: none;
+        color: brown;
+        padding: 5px 10px;
+        border: transparent;
+        transition: 0.6s ease;
+        size: 5px;
     }
 }

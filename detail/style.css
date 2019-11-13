@@ -231,18 +231,55 @@ footer{
 }
 @media only screen and (max-width: 700px){
     .form-control {
+        width: 300px;
+        background: transparent;
+        border: 1px solid black;
+        border-bottom: 1px solid grey;
+        color: palevioletred;
         font-size: 15px;
+        /* margin-bottom: 16px; */
     }
+    
+    input {
+        height: 40px;
+        ;
+    }
+    
     .button {
-        font-size: 15px;
+        background: palevioletred;
+        border-color: transparent;
+        color: wheat;
+        font-weight: bold;
+        letter-spacing: 2px;
         text-align: center;
-        margin-bottom: 20px;
+        height: 40px;
+        /* margin-top: 20px; */
     }
+    
     .button:hover {
-        font-size: 15px;
+        background-color: peru;
         cursor: pointer;
     }
+<<<<<<< HEAD
 }
 
 .comment-line
 /* ==================== */
+=======
+    
+    @media only screen and (max-width: 700px) {
+        .form-control {
+            font-size: 15px;
+        }
+        .button {
+            font-size: 15px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .button:hover {
+            font-size: 15px;
+            cursor: pointer;
+        }
+    }
+    /* ==================== */
+>>>>>>> 6c1b1079d375b66c23f1f19fd98a2a9cdb79e080

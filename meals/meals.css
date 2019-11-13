@@ -6,7 +6,7 @@
 
 html {
     scroll-behavior: smooth;
-  }
+}
 
 body {
     background-image: url(homepage.jpeg);
@@ -16,11 +16,11 @@ body {
     background-attachment: fixed;
 }
 
-.main {
+
+/* .main {
     max-width: 1200px;
     margin: auto;
-   
-}
+} */
 
 ul {
     float: right;
@@ -34,11 +34,6 @@ ul li {
 
 ul li a {
     text-decoration: none;
-    font-family: 'Roboto', sans-serif;
-    font-family: 'Sacramento', cursive;
-    font-family: 'Mr De Haviland', cursive;
-    font-family: 'Alex Brush', cursive;
-	font-weight: normal;
     color: brown;
     padding: 5px 20px;
     border: transparent;
@@ -88,7 +83,7 @@ a.fab.fa-youtube:hover {
 }
 
 #content-wrap {
-    /* padding-bottom: 2.5rem;     */
+    padding-bottom: 2.5rem;
     width: 70%;
     margin: auto;
 }
@@ -149,8 +144,7 @@ header {
     font-size: 50px;
     padding: 16px 50px;
     text-decoration: none;
-    font-family: 'Roboto', sans-serif;
-
+    /* font-family: 'Roboto', sans-serif; */
 }
 
 #myDIV {
@@ -161,16 +155,15 @@ header {
     align-items: center;
 }
 
-.food-img{
+.food-img {
     width: 33vw;
     height: 40vh;
 }
 
-.food-img > img{
+.food-img>img {
     width: 100%;
     height: 100%;
-    
-} 
+}
 
 #recommend-tab {
     width: 100vw;
@@ -184,26 +177,26 @@ header {
     font-size: 50px;
     text-decoration: underline;
 }
-@media only screen and (max-width: 700px){
-    .text{
+
+@media only screen and (max-width: 700px) {
+    .text {
         font-size: 15px;
     }
     .headerLogo h1 a {
         font-size: 60px;
         margin-left: 80px;
         cursor: pointer;
-    } 
+    }
     ul li a {
         font-size: 15px;
         padding: 10px;
         margin-bottom: 20px;
     }
-    .main-supporting{
+    .main-supporting {
         margin-top: 20px;
     }
-    body{
+    body {
         background-size: cover;
         background-position: bottom;
     }
-    
 }
