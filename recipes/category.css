@@ -151,7 +151,7 @@ hr {
 
 .img-container:hover {
     transform: scale(1.05);
-    box-shadow: 0 10px 15px;
+    box-shadow: 0 0px 15px grey;
 }
 
 .img-container:hover .detail-btn {
@@ -159,7 +159,7 @@ hr {
 }
 
 .img-container:hover .product-img {
-    transform: scale(1.2);
+    transform: scale(1.15);
 }
 
 .product-img {
@@ -190,8 +190,9 @@ hr {
 }
 
 .product h3 {
+    font-family: 'Montserrat', sans-serif;
     text-transform: capitalize;
-    font-size: 30px;
+    font-size: 2rem;
     margin-top: 2rem;
     text-align: center;
     background: white;
