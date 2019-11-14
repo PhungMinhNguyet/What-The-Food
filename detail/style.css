@@ -153,6 +153,11 @@ header{
     padding: 20px;
 }
 
+.side div {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 .img-container-main {
     position: relative;
     width: 500px;
@@ -173,11 +178,12 @@ header{
 }
 
 .ingredient-list {
-    margin-top: 50px
+    margin-top: 30px
 }
 
 .ingredient-list h2 {
     text-align: center;
+    font-size: 30px;
 }
 
 p {
@@ -237,7 +243,6 @@ footer{
         border-bottom: 1px solid grey;
         color: palevioletred;
         font-size: 15px;
-        /* margin-bottom: 16px; */
     }
     
     input {
@@ -253,33 +258,9 @@ footer{
         letter-spacing: 2px;
         text-align: center;
         height: 40px;
-        /* margin-top: 20px; */
     }
     
     .button:hover {
         background-color: peru;
         cursor: pointer;
     }
-<<<<<<< HEAD
-}
-
-.comment-line
-/* ==================== */
-=======
-    
-    @media only screen and (max-width: 700px) {
-        .form-control {
-            font-size: 15px;
-        }
-        .button {
-            font-size: 15px;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .button:hover {
-            font-size: 15px;
-            cursor: pointer;
-        }
-    }
-    /* ==================== */
->>>>>>> 6c1b1079d375b66c23f1f19fd98a2a9cdb79e080
