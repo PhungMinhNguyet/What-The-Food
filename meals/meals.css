@@ -83,7 +83,7 @@ a.fab.fa-youtube:hover {
 .product {
     position: relative;
     text-align: center;
-    /* margin: 20px; */
+    margin: 20px;
 }
 
 .img-container {
@@ -105,6 +105,41 @@ a.fab.fa-youtube:hover {
 
 .img-container:hover .product-img {
     transform: scale(1.2);
+}
+
+.product-img {
+    display: block;
+    width: 100%;
+    transition: 1s;
+    margin: 0 auto;
+}
+
+.detail-btn {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    background: white;
+    border: none;
+    text-transform: uppercase;
+    padding: 0.3rem 0.45rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: all 250ms ease;
+    transform: translateX(101%);
+    cursor: pointer;
+}
+
+.detail-btn:hover {
+    color: white;
+    background: green;
+}
+
+.product h3 {
+    text-transform: capitalize;
+    font-size: 2rem;
+    margin-top: 2rem;
+    text-align: center;
+    background: white;
 }
 
 
@@ -182,18 +217,18 @@ header {
 
 #myDIV {
     display: flex;
-    padding: 50px 0;
+    padding: 50px 50px;
     /* text-align: center; */
     justify-content: center;
     align-items: center;
 }
 
-.food-img {
-    width: 33vw;
-    height: 40vh;
+.img-container {
+    width: 40vh;
+    height: 50vh;
 }
 
-.food-img>img {
+.img-container>img {
     width: 100%;
     height: 100%;
 }
