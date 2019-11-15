@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <script src="meals.js" defer></script>
     <script src="mealss.js" defer></script>
+    <link rel="icon" type="image/icon" href="https://cdn1.iconfinder.com/data/icons/social-messaging-ui-color-shapes/128/eat-circle-orange-512.png">
 </head>
 
 <body>
@@ -26,7 +27,7 @@
                 </li>
                 <li><a class="nav-content" href="../homePage/homePage.html">Home</a></li>
                 <li><a class="nav-content" href="../recipes/recipes.html">Recipes</a></li>
-                <li><a class="nav-content" href="#contact">Intro</a></li>
+                <li><a class="nav-content" href="./meals/meals.html">Meals</a></li>
             </ul>
         </nav>
         <div class="headerLogo">
@@ -41,39 +42,41 @@
                 <div class="food">
                     <img src="./pic/breakfast.jpg" alt="breakfast" class="image">
                     <div class="meals">
-                        <a href="#recommend-tab" onclick="showhide()" class="text">Breakfast</a>
+                        <a href="#recommend-tab" onclick="showhide()" class="text" id='breakfast'>Breakfast</a>
                     </div>
                 </div>
                 <div class="food">
                     <img src="./pic/lunch2.jpg" alt="lunch" class="image">
                     <div class="meals">
-                        <a href="#recommend-tab" onclick="showhide()" class="text">Lunch</a>
+                        <a href="#recommend-tab" onclick="showhide()" class="text" id='lunch'>Lunch</a>
                     </div>
                 </div>
                 <div class="food">
                     <img src="./pic/brunch1.jpg" alt="brunch" class="image">
                     <div class="meals">
-                        <a href="#recommend-tab" onclick="showhide()" class="text">Brunch</a>
+                        <a href="#recommend-tab" onclick="showhide()" class="text" id='brunch'>Brunch</a>
                     </div>
                 </div>
                 <div class="food">
                     <img src="./pic/dinner.jpg
                     " alt="dinner" class="image">
                     <div class="meals">
-                        <a href="#recommend-tab" onclick="showhide()" class="text">Dinner</a>
+                        <a href="#recommend-tab" onclick="showhide()" class="text" id='dinner'>Dinner</a>
                     </div>
                 </div>
                 <div id='recommend-tab'>
+                    <!-- <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+                    <script type='text/javascript'>
+                        $(document).ready(function() {
+                            $('.menu').click(function() {
+                                $('ul').toggleClass('active')
+                            })
+                        });
+                    </script> -->
                     <div id='recommend-tab-title'>Recommend</div>
-                    <div id="myDIV">
-                        <div class="food-img">
-                            <img src="./pic/thitcho.jpg" alt="1">
-                        </div>
-                        <div class="food-img">
-                            <img src="./pic/pho.jpg" class="food-img" alt="2">
-                        </div>
-                        <div class='food-img'>
-                            <img src="http://www.vietnam-recipes.com/wp-content/uploads/2019/01/B%C3%A1nh-cu%E1%BB%91n-Recipe-Vietnamese-Steamed-Rice-Rolls.jpg" class="food-img" alt="3">
+                    <div class="product-center" id='list-food'>
+                        <div id="myDIV">
+
                         </div>
                     </div>
                 </div>

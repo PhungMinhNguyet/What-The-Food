@@ -107,7 +107,6 @@ hr {
     font-size: 10px;
 }
 
-
 /* ============= */
 
 
@@ -134,12 +133,13 @@ hr {
     grid-row-gap: 2rem;
     transition: 500ms;
     position: relative;
+    justify-items: center;
 }
 
 .product {
     position: relative;
     text-align: center;
-    /* margin: 20px; */
+    width: 90%;
 }
 
 .img-container {
@@ -152,7 +152,7 @@ hr {
 
 .img-container:hover {
     transform: scale(1.05);
-    box-shadow: 0 10px 15px;
+    box-shadow: 0 0px 15px grey;
 }
 
 .img-container:hover .detail-btn {
@@ -160,7 +160,7 @@ hr {
 }
 
 .img-container:hover .product-img {
-    transform: scale(1.2);
+    transform: scale(1.15);
 }
 
 .product-img {
@@ -191,11 +191,16 @@ hr {
 }
 
 .product h3 {
+    font-family: 'Montserrat', sans-serif;
     text-transform: capitalize;
-    font-size: 2rem;
+    font-size: 27px;
     margin-top: 2rem;
     text-align: center;
     background: white;
+    height: 2.2em;
+    line-height: 2.2em;
+    text-align: center;
+    
 }
 
 
