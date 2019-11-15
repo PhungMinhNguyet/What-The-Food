@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Alex+Brush|Mr+De+Haviland|Sacramento|Satisfy&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
-    <script src="recipes.js"></script>
+    <!-- <script src="recipes.js"></script> -->
 </head>
 
 <body>
@@ -57,23 +57,23 @@
             <hr>
             <!-- Comment -->
             <div class="contact-form">
-                <textarea name="name" type="name" class="form-control form-control-name" placeholder="Your name" required></textarea>
+                <textarea name="name" type="name" class="form-control form-control-name" id="input-name" placeholder="Your name" required></textarea>
                 <form action="contact-form" method="post"></form>
-                <textarea name="comment" type="text" class="form-control form-control-cmt" placeholder="Your comment"></textarea>
+                <textarea name="comment" type="text" class="form-control form-control-cmt" id="input-cmt" placeholder="Your comment"></textarea>
                 <br>
-                <input type="button" class="form-control button" value="SEND">
+                <button class="form-control button" id="btn">SEND</button>
             </div>
-            <div class='comment-line' style="display: flex;">
-                <img src="https://petto.vn/wp-content/uploads/2019/07/nhung-hanh-dong-la-lung-ma-loai-cho-thuong-lam.jpg" alt="">
-                <div class='comment-area'>
-                    <div class="comment-author">Name</div>
-                    <div class = 'comment-text'>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae explicabo possimus dolorum molestiae similique placeat asperiores non, harum modi libero ipsum, omnis dignissimos minima ipsam illo fugiat quibusdam architecto iste!</p>
-                    </div>
-                </div>
-            </div>
+            <div id="comment">
+                <!-- 1 comment -->
+            
+            </div>  
+
             <!-- ================ -->
         </div>
+        <div id="listingTable">  </div>
+<a href="javascript:prevPage()" id="btn_prev">Prev</a>
+<a href="javascript:nextPage()" id="btn_next">Next</a>
+page: <span id="page"></span>
     <div class="side">
         <h2>Side</h2>
         <div class='img-container-side'>
@@ -87,8 +87,9 @@
     </var>
     <hr>
     <footer>
-        
+
     </footer>
 </body>
+<script src="comment.js"></script>
 
 </html>
