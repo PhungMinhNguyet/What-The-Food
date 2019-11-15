@@ -244,9 +244,9 @@ function showDinner(dataDinner1, dataDinner2, dataDinner3) {
         item.innerHTML = ' ';
     }
 
-    let id1 = dataLunch1.meals[num1].idMeal;
-    let id2 = dataLunch2.meals[num2].idMeal;
-    let id3 = dataLunch3.meals[num3].idMeal;
+    let id1 = dataDinner1.meals[num1].idMeal;
+    let id2 = dataDinner2.meals[num2].idMeal;
+    let id3 = dataDinner3.meals[num3].idMeal;
     item.insertAdjacentHTML('beforeend',
         `<article class='product'>
 <div class="img-container">
