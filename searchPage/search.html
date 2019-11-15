@@ -9,12 +9,13 @@
     <link rel="stylesheet" href="search.css">
     <link href="https://fonts.googleapis.com/css?family=Alex+Brush|Mr+De+Haviland|Sacramento|Satisfy&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/618c2360bc.js"></script>
-    <script src="script.js" defer></script>
+    <script src="search.js" defer></script>
+    <link rel="icon" type="image/icon" href="https://cdn1.iconfinder.com/data/icons/social-messaging-ui-color-shapes/128/eat-circle-orange-512.png">
 </head>
 
 <body>
     <header>
-        <div class="main">
+        <div id="main">
             <ul>
                 <li>
                     <a class="fab fa-instagram" href="https://www.instagram.com/foody.vn/" target="#"></a>
@@ -22,20 +23,26 @@
                 <li>
                     <a class="fab fa-youtube" href="https://www.youtube.com/channel/UCJFp8uSYCjXOMnkUyb3CQ3Q" target="#"></a>
                 </li>
-                <li>
-                    <a class="nav-content" href="../homePage/index.html">Home</a></li>
-                <li><a class="nav-content" href="#news">Recipes</a></li>
+                <li><a class="nav-content" href="../homePage/homePage.html">Home</a></li>
+                <li><a class="nav-content" href="../recipes/category.html">Recipe</a></li>
                 <li><a class="nav-content" href="#contact">Intro</a></li>
-
+            </ul>
         </div>
         <div class="title">
             <h1>What The Food?</h1>
-
             <div class="form-box">
-                <input type="text" class="search-field food" placeholder="Type your food here ">
-                <button class="search-btn" type="button">Search</button>
+                <input id="input" type="text" class="search-field food" placeholder="Search">
+                <button id="search" class="search-btn" type="button">Search</button>
             </div>
+        </div>
     </header>
+    <div id="container">
+        <div id="content-wrap">
+            <div id="main-supporting">
+
+            </div>
+        </div>
+    </div>
 </body>
 
-</html
+</html>
