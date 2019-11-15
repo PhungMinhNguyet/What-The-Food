@@ -1,6 +1,6 @@
 /// catch event mealsPage
 let item = document.getElementById("myDIV");
-let itemM = item.getElementsByClassName('product');
+
 
 //Breakfast button
 const btnBre = document.getElementById('breakfast');
@@ -20,26 +20,26 @@ function showBreakfast(dataBre) {
 
     let num = Math.floor(Math.random() * dataBre.meals.length);
     // re-eddit show detail
-
+    let itemM = item.getElementsByClassName('product');
     console.log(itemM);
 
     if (itemM.length >= 1) {
         item.innerHTML = ' ';
     }
-
+    let id = dataBre.meals[num].idMeal;
     item.insertAdjacentHTML('beforeend',
         `
- <article class='product'>
- <div class = "break>
-        <div class="img-container">
+    <article class='product'>
+    
+        <div class="img-container" id="${id}">
         <img src="${ dataBre.meals[num].strMealThumb}" class='product-img' alt="">
-             <button class='detail-btn'>Detail</button>
+             <button class='detail-btn'>Detail<a href="../detail/detail.html?id=${id}" class="text"></button>
         <h3>${dataBre.meals[num].strMeal}</h3>
         </div>
+    
+    </article>
+    `);
 
-</div>
-</article>
-`);
 
 
 }
@@ -69,16 +69,15 @@ function showBrunch(dataBrunch) {
     if (itemM.length >= 1) {
         item.innerHTML = ' ';
     }
-
+    let id = dataBrunch.meals[num].idMeal;
     item.insertAdjacentHTML('beforeend',
         `<article class='product'>
 <div class="img-container">
     <img src="${ dataBrunch.meals[num].strMealThumb}" class='product-img' alt="">
-    <button class='detail-btn'>Detail</button>
+    <button class='detail-btn'>Detail<a href="../detail/detail.html?id=${id}" class="text"></button>
     <h3>${dataBrunch.meals[num].strMeal}</h3>
 </div>
 </article>`);
-    console.log(dataBrunch.meals[num].strMeal);
 
 }
 
@@ -148,28 +147,14 @@ function showLunch(dataLunch1, dataLunch2, dataLunch3) {
         item.innerHTML = ' ';
     }
 
-    // itemList.push(dataLunch1.meals[num1].strMeal);
-    // itemList.push(dataLunch2.meals[num2].strMeal);
-    // itemList.push(dataLunch3.meals[num3].strMeal);
-
-    // re-eddit show detail
-    //     for (let i = 0; i < itemList.length; i++) {
-    //         item.insertAdjacentHTML('beforeend',
-    //             `<article class='product'>
-    //  <div class="img-container">
-    //     <img src="${ dataLunch.meals[i].strMealThumb}" class='product-img' alt="${i+1}">
-    //     <button class='detail-btn'>Detail</button>
-    //     <h3>${dataLunch.meals[i].strMeal}</h3>
-    // </div>
-    //       </article>`);
-    //     }
-
-
+    let id1 = dataLunch1.meals[num1].idMeal;
+    let id2 = dataLunch2.meals[num2].idMeal;
+    let id3 = dataLunch3.meals[num3].idMeal;
     item.insertAdjacentHTML('beforeend',
         `<article class='product'>
 <div class="img-container">
 <img src="${ dataLunch1.meals[num1].strMealThumb}" class='product-img' alt="1">
-<button class='detail-btn'>Detail</button>
+<button class='detail-btn'>Detail<a href="../detail/detail.html?id=${id1}" class="text"></button>
 <h3>${dataLunch1.meals[num1].strMeal}</h3>
 </div>
 </article>`);
@@ -177,7 +162,7 @@ function showLunch(dataLunch1, dataLunch2, dataLunch3) {
         `<article class='product'>
 <div class="img-container">
 <img src="${ dataLunch2.meals[num2].strMealThumb}" class='product-img' alt="2">
-<button class='detail-btn'>Detail</button>
+<button class='detail-btn'>Detail<a href="../detail/detail.html?id=${id2}" class="text"></button>
 <h3>${dataLunch2.meals[num2].strMeal}</h3>
 </div>
 </article>`);
@@ -185,7 +170,7 @@ function showLunch(dataLunch1, dataLunch2, dataLunch3) {
         `<article class='product'>
 <div class="img-container">
 <img src="${ dataLunch3.meals[num3].strMealThumb}" class='product-img' alt="3">
-<button class='detail-btn'>Detail</button>
+<button class='detail-btn'>Detail<a href="../detail/detail.html?id=${id3}" class="text"></button>
 <h3>${dataLunch3.meals[num3].strMeal}</h3>
 </div>
 </article>`);
@@ -212,9 +197,7 @@ function randomCategoryDinner(dataCategory) {
     let position4 = Math.floor(Math.random() * dataCategory.meals.length);
 
     console.log("randomfunction", position3, position4);
-    // if (position3 = position1 || position3 == position2) {
-    //     position3 = Math.floor(Math.random() * dataCategory.meals.length);
-    // }
+
     if (position4 == position3) {
         position4 = Math.floor(Math.random() * dataCategory.meals.length);
     }
@@ -222,12 +205,12 @@ function randomCategoryDinner(dataCategory) {
     let categogyMeal4 = dataCategory.meals[position4].strCategory;
 
     if (categogyMeal3 == "Dessert" || categogyMeal3 == "Breakfast") {
-        position2 = Math.floor(Math.random() * dataCategory.meals.length);
-        categogyMeal2 = dataCategory.meals[position2].strCategory;
+        position3 = Math.floor(Math.random() * dataCategory.meals.length);
+        categogyMeal3 = dataCategory.meals[position3].strCategory;
     }
     if (categogyMeal4 == "Dessert" || categogyMeal4 == "Breakfast") {
-        position2 = Math.floor(Math.random() * dataCategory.meals.length);
-        categogyMeal2 = dataCategory.meals[position2].strCategory;
+        position4 = Math.floor(Math.random() * dataCategory.meals.length);
+        categogyMeal4 = dataCategory.meals[position4].strCategory;
     }
     console.log("meals", categogyMeal3, categogyMeal4);
     urlDinner(categogyMeal3, categogyMeal4);
@@ -255,18 +238,20 @@ function showDinner(dataDinner1, dataDinner2, dataDinner3) {
     let num3 = Math.floor(Math.random() * dataDinner3.meals.length);
     // re-eddit show detail
     let itemM = item.getElementsByClassName('product');
-    console.log(itemM);
+    console.log(itemM.idMeal);
 
     if (itemM.length >= 3) {
         item.innerHTML = ' ';
     }
 
-
+    let id1 = dataLunch1.meals[num1].idMeal;
+    let id2 = dataLunch2.meals[num2].idMeal;
+    let id3 = dataLunch3.meals[num3].idMeal;
     item.insertAdjacentHTML('beforeend',
         `<article class='product'>
 <div class="img-container">
 <img src="${ dataDinner1.meals[num1].strMealThumb}" class='product-img' alt="1">
-<button class='detail-btn'>Detail</button>
+<button class='detail-btn'>Detail<a href="../detail/detail.html?id=${id1}" class="text"></button>
 <h3>${dataDinner1.meals[num1].strMeal}</h3>
 </div>
 </article>`);
@@ -274,7 +259,7 @@ function showDinner(dataDinner1, dataDinner2, dataDinner3) {
         `<article class='product'>
 <div class="img-container">
 <img src="${ dataDinner2.meals[num2].strMealThumb}" class='product-img' alt="2">
-<button class='detail-btn'>Detail</button>
+<button class='detail-btn'>Detail<a href="../detail/detail.html?id=${id2}" class="text"></button>
 <h3>${dataDinner2.meals[num2].strMeal}</h3>
 </div>
 </article>`);
@@ -282,13 +267,11 @@ function showDinner(dataDinner1, dataDinner2, dataDinner3) {
         `<article class='product'>
 <div class="img-container">
 <img src="${ dataDinner3.meals[num3].strMealThumb}" class='product-img' alt="3">
-<button class='detail-btn'>Detail</button>
-<h3>${dataDinner3.meals[num3].strMeal}</h3>
+<button class='detail-btn'>Detail<a href="../detail/detail.html?id=${id3}" class="text"></button>
+<h3>${dataDinner3.meals[num3].strMeal}</h3>i
 </div>
 </article>`);
 
     console.log("List ", itemM);
-
-
 
 }

@@ -136,8 +136,8 @@ a.fab.fa-youtube:hover {
 
 .product h3 {
     text-transform: capitalize;
-    font-size: 2rem;
-    margin-top: 2rem;
+    font-size: 5px;
+    margin-top: 10px;
     text-align: center;
     background: white;
 }
@@ -218,13 +218,13 @@ header {
 #myDIV {
     display: flex;
     padding: 50px 50px;
-    /* text-align: center; */
+    text-align: center;
     justify-content: center;
     align-items: center;
 }
 
 .img-container {
-    width: 40vh;
+    width: 60vh;
     height: 50vh;
 }
 
