@@ -6,16 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Recipes</title>
+    <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="category.css">
     <script src="https://kit.fontawesome.com/618c2360bc.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Alex+Brush|Mr+De+Haviland|Sacramento|Satisfy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="icon" type="image/icon" href="https://cdn1.iconfinder.com/data/icons/social-messaging-ui-color-shapes/128/eat-circle-orange-512.png">
+
 </head>
 
 <body>
     <header>
+        <div class="headerLogo">
+            <h1>
+                <a id="logo" href="/index.html"><img src="https://cdn1.iconfinder.com/data/icons/social-messaging-ui-color-shapes/128/eat-circle-orange-512.png" alt=""> <span>What The Food ?</span></a>
+            </h1>
+        </div>
         <nav class="main">
             <ul class='nav-link'>
                 <li>
@@ -24,19 +31,11 @@
                 <li>
                     <a class="fab fa-youtube" href="https://www.youtube.com/channel/UCJFp8uSYCjXOMnkUyb3CQ3Q" target="#"></a>
                 </li>
-                <li><a class="nav-content" href="index.html">Home</a></li>
-                <li><a class="nav-content" href="./recipes/category.html">Recipes</a></li>
+                <li><a class="nav-content" href="/index.html">Home</a></li>
+                <li><a class="nav-content" href="../recipes/category.html">Recipes</a></li>
                 <li><a class="nav-content" href="../meals/meals.html">Meals</a></li>
             </ul>
-            <!-- <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Recipe</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul> -->
         </nav>
-        <div class="headerLogo">
-            <h1><a id="logo" href="/index.html">What The Food ?</a></h1>
-        </div>
     </header>
     <hr>
     <!--product -->
@@ -47,6 +46,35 @@
         <div class="product-center" id='list-category'></div>
     </section>
     <script src="category.js"></script>
+    <hr>
 </body>
+<footer>
+    <div class="logo-footer">
+        <div>
+            <img src="https://cdn1.iconfinder.com/data/icons/social-messaging-ui-color-shapes/128/eat-circle-orange-512.png" alt="">
+            <a href="/index.html">What The Food ?</a>
+        </div>
+    </div>
+    <div class='website'>
+        <span>Favorite</span>
+        <a href="https://www.luxstay.com/vi/vietnam/lam-dong/da-lat">Pork</a>
+        <a href="https://www.luxstay.com/vi/vietnam/quang-nam/hoi-an">Goat</a>
+        <a href="https://www.luxstay.com/vi/vietnam/quang-nam/hoi-an">Beef</a>
+        <a href="https://www.luxstay.com/vi/vietnam/quang-nam/hoi-an">Pasta</a>
+    </div>
+    <div class='social'>
+        <span>Social</span>
+        <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i> Facebook</a>
+        <a href="Instagram.com"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="Twitter.com"><i class="fab fa-twitter"></i> Twitter</a>
+
+    </div>
+    <div class='contact-info'>
+        <span>About us</span>
+        <div><i class="fas fa-users"></i> H2Team</div>
+        <div><i class="far fa-envelope"></i> wtf@email.com</div>
+        <div><i class="fas fa-phone"></i> 012 345 7899</div>
+    </div>
+</footer>
 
 </html>

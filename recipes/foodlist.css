@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    font: "Segoe UI Semibold";
+    /* font-family: "Segoe UI"; */
 }
 
 html {
@@ -9,23 +9,22 @@ html {
 }
 
 body {
-    background-image: url(homepage.jpeg);
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: rgb(241, 241, 241);
 }
 
-
-/* .main {
-    max-width: 1200px;
-    margin: auto;
-} */
+.main {
+    display: flex;
+    align-items: center;
+    font-size: 1.3em;
+}
 
 ul {
-    float: right;
+    display: flex;
     list-style-type: none;
-    margin-top: 25px;
 }
 
 ul li {
@@ -37,8 +36,12 @@ ul li a {
     color: brown;
     padding: 5px 20px;
     border: transparent;
-    transition: 0.6s ease;
+    transition: .3s ease;
     size: 50px;
+}
+
+h2 {
+    font-family: 'Alex Brush', cursive;
 }
 
 a.nav-content:hover {
@@ -48,23 +51,33 @@ a.nav-content:hover {
 
 .headerLogo h1 {
     text-shadow: 2px 2px 0px #d5d5d5, 4px 4px 0px rgba(0, 0, 0, 0.2);
-    font-family: 'Satisfy', cursive;
-    font-family: 'Sacramento', cursive;
-    font-family: 'Mr De Haviland', cursive;
     font-family: 'Alex Brush', cursive;
-    /* font-weight: normal; */
-    margin: 2px;
-    padding: 5px;
     line-height: 70px;
-    width: 80%;
     font-size: 70px;
     cursor: pointer;
 }
 
+.headerLogo h1 span {
+    text-shadow: 2px 2px 0px #d5d5d5, 4px 4px 0px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    font-family: 'Satisfy', cursive;
+    font-family: 'Sacramento', cursive;
+    font-family: 'Mr De Haviland', cursive;
+    font-family: 'Alex Brush', cursive;
+    font-size: 70px;
+}
+
+.headerLogo h1 a img {
+    width: 60px;
+    margin-right: 20px;
+}
+
 .headerLogo h1 a {
-    font-size: 100px;
+    font-size: 50px;
     text-decoration: none;
     color: brown;
+    display: flex;
+    align-items: center;
 }
 
 a.fab.fa-instagram:hover {
@@ -79,12 +92,14 @@ a.fab.fa-youtube:hover {
 
 .headerLogo {
     text-align: center;
-    margin-top: 30px;
 }
 
 header {
     width: 80%;
     margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
 }
 
 .nav-icon {
@@ -107,6 +122,7 @@ hr {
     font-size: 10px;
 }
 
+
 /* ============= */
 
 
@@ -118,9 +134,11 @@ hr {
 
 .recipe-title h2 {
     text-align: center;
-    font-size: 5rem;
+    font-size: 3.5rem;
     margin-bottom: 5rem;
-    /* text-transform: capitalize; */
+    padding-bottom: 10px;
+    background: rgb(238, 188, 188);
+    color: rgb(255, 255, 255);
 }
 
 .product-center {
@@ -139,7 +157,7 @@ hr {
 .product {
     position: relative;
     text-align: center;
-    width: 90%;
+    width: 85%;
 }
 
 .img-container {
@@ -167,7 +185,6 @@ hr {
     display: block;
     width: 100%;
     transition: 1s
-    /* margin: 0 auto; */
 }
 
 .detail-btn {
@@ -176,10 +193,10 @@ hr {
     right: 0;
     background: white;
     border: none;
-    text-transform: uppercase;
-    padding: 0.3rem 0.45rem;
+    /* text-transform: uppercase; */
+    padding: 0.3rem 1rem;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     transition: all 250ms ease;
     transform: translateX(101%);
     cursor: pointer;
@@ -193,15 +210,41 @@ hr {
 .product h3 {
     font-family: 'Montserrat', sans-serif;
     text-transform: capitalize;
-    font-size: 27px;
+    font-size: 1.6rem;
     margin-top: 2rem;
     text-align: center;
     background: white;
-    height: 2.2em;
-    line-height: 2.2em;
-    text-align: center;
-    
+    padding: 4px 0px;
 }
 
 
 /* ==================================== */
+
+@media only screen and (max-width: 480px) {
+    header {
+        flex-direction: column-reverse;
+    }
+    .main {
+        margin: 0px auto;
+        font-size: 30px;
+    }
+    body {
+        width: 100vh;
+    }
+    .headerLogo {
+        margin-top: 30px;
+    }
+    #logo {
+        width: 80px;
+        margin-top: 40px;
+    }
+    .product {
+        width: 120%;
+    }
+    footer {
+        font-size: 26px;
+    }
+    .website {
+        display: none;
+    }
+}
