@@ -143,7 +143,7 @@ function showLunch(dataLunch1, dataLunch2, dataLunch3) {
     let itemM = item.getElementsByClassName('product');
     console.log(itemM);
 
-    if (itemM.length >= 2) {
+    if (itemM.length >= 3) {
         item.innerHTML = ' ';
     }
 
@@ -240,7 +240,7 @@ function showDinner(dataDinner1, dataDinner2, dataDinner3) {
     let itemM = item.getElementsByClassName('product');
     console.log(itemM.idMeal);
 
-    if (itemM.length >= 2) {
+    if (itemM.length >= 3) {
         item.innerHTML = ' ';
     }
 
