@@ -150,9 +150,7 @@ a {
     font-size: 20px;
     font-weight: lighter;
 }
-.form-box{
-    text-align: center;
-}
+
 @media only screen and (max-width: 700px) {
     .title h1 {
         font-size: 55px;
@@ -173,14 +171,5 @@ a {
         text-align: center;
         box-sizing: border-box;
         margin-left: 150px;
-    }
-    body {
-        background-image: url(./pic/homepage.jpeg);
-        background-size: cover;
-        background-position: bottom;
-        background-attachment: fixed;
-    }
-    #main-supporting{
-        margin-top: 70px;
     }
 }
