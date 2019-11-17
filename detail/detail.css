@@ -13,7 +13,12 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    /* font-family: "Segoe UI Semibold"; */
+    font-family: "Segoe UI Semibold";
+}
+
+.headerLogo h1 a img {
+    width: 60px;
+    margin-right: 20px;
 }
 
 hr {
@@ -38,6 +43,10 @@ hr {
     margin-top: 35px;
 }
 
+ul li {
+    display: inline-block;
+}
+
 #detailIngredient ol li {
     font: normal 300 16px/20px "Segoe UI", Helvetica, Arial, Sans-serif;
     line-height: 30px;
@@ -45,23 +54,42 @@ hr {
     list-style: none;
 }
 
-ul {
-    float: right;
-    list-style-type: none;
-    margin-top: 25px;
-}
-
-ul li {
-    display: inline-block;
-}
-
 ul li a {
     text-decoration: none;
+    font-weight: normal;
     color: brown;
     padding: 5px 20px;
-    border: transparent;
     transition: 0.6s ease;
-    size: 5px;
+    font-size: 17px;
+}
+
+.headerLogo h1 {
+    text-shadow: 2px 2px 0px #d5d5d5, 4px 4px 0px rgba(0, 0, 0, 0.2);
+    font-family: 'Satisfy', cursive;
+    font-family: 'Sacramento', cursive;
+    font-family: 'Mr De Haviland', cursive;
+    font-family: 'Alex Brush', cursive;
+    margin: 2px;
+    padding: 5px;
+    line-height: 70px;
+    width: 80%;
+    cursor: pointer;
+    margin-top: 30px;
+    text-align: left;
+}
+
+.main {
+    display: block;
+    align-items: center;
+    font-size: 1.3em;
+    float: right;
+    padding: 0 px;
+}
+
+.headerLogo h1 a {
+    font-size: 100px;
+    text-decoration: none;
+    color: brown;
 }
 
 a.fab.fa-instagram:hover {
@@ -72,6 +100,15 @@ a.fab.fa-instagram:hover {
 a.fab.fa-youtube:hover {
     background-color: brown;
     color: white;
+}
+
+.headerLogo {
+    text-align: center;
+}
+
+header {
+    width: 100%;
+    margin: auto;
 }
 
 .nav-icon {
@@ -90,81 +127,25 @@ a.fab.fa-youtube:hover {
 
 /* Recipe detail */
 
-.headerLogo h1 a {
-    /* font-weight: normal; */
-    /* margin: 2px;
-    padding: 5px; */
-    line-height: 70px;
-    width: 50%;
-    cursor: pointer;
-}
-
-.headerLogo h1 span {
-    text-shadow: 2px 2px 0px #d5d5d5, 4px 4px 0px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    font-family: 'Satisfy', cursive;
-    font-family: 'Sacramento', cursive;
-    font-family: 'Mr De Haviland', cursive;
-    font-family: 'Alex Brush', cursive;
-    font-size: 70px;
-    display: inline-block;
-}
-
-.main {
-    display: inline-block;
-    align-items: center;
-    font-size: 1.3em;
-    float: right;
-    padding: 0 px;
-}
-
-.headerLogo {
-    text-align: center;
-}
-
-.headerLogo h1 {
-    text-shadow: 2px 2px 0px #d5d5d5, 4px 4px 0px rgba(0, 0, 0, 0.2);
-    font-family: 'Alex Brush', cursive;
-    line-height: 70px;
-    font-size: 70px;
-    cursor: pointer;
-}
-
-.headerLogo h1 a {
-    text-decoration: none;
-    color: brown;
-}
-
-a.fab.fa-instagram:hover {
-    background-color: brown;
-    color: white;
-}
-
-a.fab.fa-youtube:hover {
-    background-color: brown;
-    color: white;
-}
-
-.headerLogo h1 a img {
-    width: 60px;
-    margin-right: 20px;
-}
-
-.headerLogo {
-    text-align: center;
-    margin-top: 30px;
-}
-
-header {
-    width: 80%;
-    margin: auto;
-}
-
 #container {
     display: flex;
     flex-wrap: wrap;
     margin-top: 50px;
     font-style: normal;
+}
+
+#main {
+    flex: 70%;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#main h1 {
+    font-family: "Segoe UI Semibold";
+    font-size: 30px;
+    margin: 1px;
 }
 
 .side {
@@ -301,10 +282,18 @@ ol {
     max-height: 270px;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 480px) {
     #nav-content {
-        margin-right: 90px;
+        float: none;
         line-height: 30px;
+    }
+    ul {
+        padding: 0px;
+        text-align: center;
+        margin-right: 15px;
+    }
+    ul li a {
+        padding: 15px;
     }
     .headerLogo h1 a {
         font-size: 60px;
@@ -312,7 +301,8 @@ ol {
     }
     .recipe-img {
         background-color: #aaa;
-        width: 100%;
+        width: 95%;
+        height: 80%;
     }
     .form-control {
         width: 300px;
@@ -345,15 +335,20 @@ ol {
     }
     #main {
         width: 100vw;
+        padding: 0px;
+    }
+    #instruction {
+        width: 90vw;
+        margin: auto;
     }
     body {
-        width: 500px;
+        width: 400px;
         margin: auto;
     }
     ol {
         display: flex;
         flex-flow: wrap column;
-        max-height: 270px;
+        max-height: 300px;
     }
     hr {
         display: none;
