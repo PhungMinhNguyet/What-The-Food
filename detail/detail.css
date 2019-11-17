@@ -1,9 +1,7 @@
 /* Header */
-
-* {
+*{
     box-sizing: border-box;
 }
-
 body {
     /* background-image: url(/pictrure/homepage.jpeg); */
     background-color: #e6e1de;
@@ -13,8 +11,9 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    /* font-family: "Segoe UI Semibold"; */
+    font-family: "Segoe UI Semibold";
 }
+
 hr {
     display: block;
     height: 1px;
@@ -25,18 +24,20 @@ hr {
     font-size: 10px;
 }
 
-.nav-bar {
+.nav-bar{
     max-width: 1200px;
     margin: auto;
     display: inline;
 }
-
 #nav-content {
     float: right;
     list-style-type: none;
     margin-top: 35px;
 }
 
+ul li {
+    display: inline-block;
+}
 #detailIngredient ol li {
     font: normal 300 16px/20px "Segoe UI", Helvetica, Arial, Sans-serif;
     line-height: 30px;
@@ -44,23 +45,13 @@ hr {
     list-style: none;
 }
 
-ul {
-    float: right;
-    list-style-type: none;
-    margin-top: 25px;
-}
-
-ul li {
-    display: inline-block;
-}
-
 ul li a {
     text-decoration: none;
+	font-weight: normal;
     color: brown;
     padding: 5px 20px;
-    border: transparent;
     transition: 0.6s ease;
-    size: 5px;
+    font-size: 17px;
 }
 
 .headerLogo h1 {
@@ -81,24 +72,23 @@ ul li a {
     font-size: 100px;
     text-decoration: none;
     color: brown;
+    
 }
-
-a.fab.fa-instagram:hover {
+a.fab.fa-instagram:hover{
     background-color: brown;
     color: white;
 }
-
-a.fab.fa-youtube:hover {
-    background-color: brown;
+a.fab.fa-youtube:hover{
+    background-color:brown;
     color: white;
 }
 
-.headerLogo {
+.headerLogo{
     text-align: center;
 }
 
-header {
-    width: 100%;
+header{
+    width:100%;
     margin: auto;
 }
 
@@ -112,12 +102,9 @@ header {
     font-size: 30px;
 }
 
-
 /* ============= */
 
-
 /* Recipe detail */
-
 #container {
     display: flex;
     flex-wrap: wrap;
@@ -140,8 +127,9 @@ header {
     margin: 1px;
 }
 
+
 .side {
-    flex: 30%;
+    flex:30%;
     /* background-color: #f1f1f1; */
     padding: 20px;
     max-width: 300px;
@@ -153,7 +141,6 @@ header {
     height: 500px;
     display: inline-block;
 }
-
 .comment-line img {
     margin-top: 20px;
     width: 2rem;
@@ -176,40 +163,36 @@ header {
     color: brown;
     margin-bottom: 5px;
 }
-
 .img-container-side img {
     width: 100%;
 }
-
 .recipe-img {
     background-color: #aaa;
     width: 80%;
     height: 80%;
 }
-
-.recipe-img:hover {
+.recipe-img:hover{
     opacity: 0.8;
 }
 
 p {
     text-align: justify;
     line-height: 30px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family:  'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-footer {
+footer{
     background-color: white;
 }
 
 
 /* Comment */
-
 .contact-form {
-    margin-top: 50px;
+    margin-top:50px;
 }
 
 .form-control {
-    width: 100%;
+    width: 100%; 
     background: white;
     border: 1px solid black;
     border-bottom: 1px solid grey;
@@ -222,7 +205,7 @@ footer {
     background-color: silver;
 }
 
-.form-control-cmt {
+.form-control-cmt{
     height: 40px;
 }
 
@@ -240,55 +223,52 @@ footer {
     background-color: peru;
     cursor: pointer;
 }
-
-#intro-food {
+#intro-food{
     text-decoration: none;
     color: #545454;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family:  'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
-#side-bar {
+#side-bar{
     padding: 5px;
 }
-
-#side-bar img:hover {
+#side-bar img:hover{
     opacity: 0.8;
 }
-
-#hix {
-    color: black;
+#hix{
+    color: black; 
     text-decoration: none;
 }
-
-#hix:hover {
+#hix:hover{
     text-decoration: underline;
 }
-
-ol li:first-letter {
-    text-transform: capitalize
+ol li:first-letter{
+    text-transform: capitalize 
 }
-
-ol {
-    display: flex;
+ol{
+    display: flex; 
     flex-flow: wrap column;
     max-height: 270px;
 }
-
-@media only screen and (max-width: 700px) {
-    
-    #nav-content {
+@media only screen and (max-width: 700px){
+    #nav-content{
         line-height: 30px;
+    }
+    ul{
+        padding : 0px;
+        text-align: center;
+        margin-right: 15px;
+    }
+    ul li a {
+        padding: 15px;
     }
     .headerLogo h1 a {
         font-size: 60px;
         margin-left: 70px;
-    }   
+    }
     .recipe-img {
         background-color: #aaa;
         width: 100%;
-    }
-    ul{
-        padding: 0;
+        height:80%;
     }
     .form-control {
         width: 300px;
@@ -299,14 +279,11 @@ ol {
         font-size: 15px;
         /* margin-bottom: 16px; */
     }
-    #main{
-        padding: 0;
-    }
     input {
         height: 40px;
     }
     .button {
-        background: #4267b2;
+        background:#4267b2;
         border-color: transparent;
         color: wheat;
         font-weight: bold;
@@ -319,42 +296,39 @@ ol {
         background-color: peru;
         cursor: pointer;
     }
-    .side {
+    .side{
         display: none;
     }
-    #main {
-        width: 95vw;
+    #main{
+        width: 100vw;
     }
-    body {
-        width: 400px;
+    body{
+        width:400px;
         margin: auto;
     }
-    ol {
-        display: flex;
+    ol{
+        display: flex; 
         flex-flow: wrap column;
-        max-height: 270px;
+        max-height: 300px;
     }
-    hr {
+    hr{
         display: none;
     }
-    #foody {
+    #foody{
         display: flex;
         flex-wrap: wrap;
     }
-}
 
-#comment {
+}
+#comment{
     box-sizing: border-box;
 }
-
 .comment-line {
-    padding: 15px;
+    padding: 15px;   
 }
-
-#foody {
+#foody{
     display: flex;
 }
-
 a.nav-content:hover {
     background-color: brown;
     color: white;
