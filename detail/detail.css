@@ -114,7 +114,6 @@ header{
 
 #main {
     flex: 70%;
-    /* background-color: rgb(255, 195, 205) ; */
     padding: 20px;
     margin-left: auto;
     margin-right: auto;
@@ -269,7 +268,7 @@ ol{
     }
     .recipe-img {
         background-color: #aaa;
-        width: 100%;
+        width: 95%;
         height:80%;
     }
     .form-control {
@@ -303,6 +302,11 @@ ol{
     }
     #main{
         width: 100vw;
+        padding: 0px;
+    }
+    #instruction{
+        width: 90vw;
+        margin: auto;
     }
     body{
         width:400px;

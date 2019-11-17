@@ -242,12 +242,16 @@ header {
 
 #recommend-tab-title {
     color: black;
+    font-family: 'Satisfy', cursive;
+    font-family: 'Sacramento', cursive;
+    font-family: 'Mr De Haviland', cursive;
+    font-family: 'Alex Brush', cursive;
     text-align: center;
     font-size: 50px;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
-.loader {
+/* .loader {
     font-family: 'Amatic SC', cursive;
     font-size: 40px;
     color: palevioletred;
@@ -261,7 +265,7 @@ header {
     justify-content: center;
     align-items: center;
     animation: dots steps(4, end) 2s linear infinite;
-}
+} */
 
 @keyframes dots {
     to {
@@ -275,14 +279,13 @@ header {
     }
     .headerLogo h1 a {
         font-size: 60px;
-        margin-left: 80px;
         cursor: pointer;
     }
     ul li a {
         font-size: 15px;
         padding: 10px;
         margin-bottom: 20px;
-        margin-right: 25px;
+        padding:16px;
     }
     .main-supporting {
         margin-top: 20px;
@@ -298,5 +301,9 @@ header {
     .image {
         width: 200%;
         height: 100%;
+    }
+    ul{
+        float: center;
+        margin-top: 0px;
     }
 }
