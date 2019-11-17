@@ -8,6 +8,7 @@ btnBre.addEventListener('click', urlBre);
 
 
 async function urlBre() {
+    item.innerHTML = '';
     const urlBre = await fetch("https://www.themealdb.com/api/json/v1/1/filter.php?c=Breakfast")
     const dataBre = await urlBre.json();
     console.log(dataBre);
@@ -51,6 +52,7 @@ btnBrunch.addEventListener('click', urlBrunch);
 
 
 async function urlBrunch() {
+    item.innerHTML = '';
     const urlBrunch = await fetch("https://www.themealdb.com/api/json/v1/1/filter.php?c=Dessert")
     const dataBrunch = await urlBrunch.json();
     console.log(dataBrunch);
@@ -85,6 +87,8 @@ const btnLunch = document.getElementById('lunch');
 btnLunch.addEventListener('click', urlListMealCategoryL);
 
 async function urlListMealCategoryL() {
+    item.innerHTML = '';
+    let itemM = item.getElementsByClassName('product');
     let urlListMealCategoryL = await fetch("https://www.themealdb.com/api/json/v1/1/list.php?c=list");
     let dataCategory = await urlListMealCategoryL.json();
     randomCategoryLunch(dataCategory);
@@ -100,51 +104,46 @@ function randomCategoryLunch(dataCategory) {
     }
 
     // GET CATEGORY NAME
-    let categogyMeal1 = dataCategory.meals[position1].strCategory;
-    let categogyMeal2 = dataCategory.meals[position2].strCategory;
+    let categoryMeal1 = dataCategory.meals[position1].strCategory;
+    let categoryMeal2 = dataCategory.meals[position2].strCategory;
 
     // if it not br and dessert is allowed
-    if (categogyMeal1 == "Dessert" || categogyMeal1 == "Breakfast") {
+    if (categoryMeal1 == "Dessert" || categoryMeal1 == "Breakfast") {
         position1 = Math.floor(Math.random() * dataCategory.meals.length);
-        categogyMeal1 = dataCategory.meals[position].strCategory;
+        categoryMeal1 = dataCategory.meals[position1].strCategory;
     }
-    if (categogyMeal2 == "Dessert" || categogyMeal2 == "Breakfast") {
+    if (categoryMeal2 == "Dessert" || categoryMeal2 == "Breakfast") {
         position2 = Math.floor(Math.random() * dataCategory.meals.length);
-        categogyMeal2 = dataCategory.meals[position2].strCategory;
+        categoryMeal2 = dataCategory.meals[position2].strCategory;
     }
 
-
-    // console.log("rrrr", categogyMeal1, categogyMeal2, categogyMeal3, categogyMeal4);
-    urlLunch(categogyMeal1, categogyMeal2);
+    // console.log("rrrr", categoryMeal1, categoryMeal2, categoryMeal3, categoryMeal4);
+    urlLunch(categoryMeal1, categoryMeal2);
 
 }
 
-async function urlLunch(categogyMeal1, categogyMeal2) {
-    console.log("eeee", categogyMeal1, categogyMeal2);
+async function urlLunch(categoryMeal1, categoryMeal2) {
+    console.log("eeee", categoryMeal1, categoryMeal2);
     const urlLunch1 = await fetch("https://www.themealdb.com/api/json/v1/1/filter.php?c=Dessert");
     const dataLunch1 = await urlLunch1.json();
-    const urlLunch2 = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${categogyMeal1}`);
+    const urlLunch2 = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${categoryMeal1}`);
     const dataLunch2 = await urlLunch2.json();
-    const urlLunch3 = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${categogyMeal2}`);
+    const urlLunch3 = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${categoryMeal2}`);
     const dataLunch3 = await urlLunch3.json();
     // console.log(dataLunch1, dataLunch2, dataLunch3);
-
     showLunch(dataLunch1, dataLunch2, dataLunch3);
-
 }
 
 function showLunch(dataLunch1, dataLunch2, dataLunch3) {
-
     // let itemList = [];
     let num1 = Math.floor(Math.random() * dataLunch1.meals.length);
     let num2 = Math.floor(Math.random() * dataLunch2.meals.length);
     let num3 = Math.floor(Math.random() * dataLunch3.meals.length);
-
     let itemM = item.getElementsByClassName('product');
     console.log(itemM);
 
     if (itemM.length >= 3) {
-        item.innerHTML = ' ';
+        item.innerHTML = '';
     }
 
     let id1 = dataLunch1.meals[num1].idMeal;
@@ -175,8 +174,6 @@ function showLunch(dataLunch1, dataLunch2, dataLunch3) {
 </div>
 </article>`);
 
-
-
 }
 
 // Dinner
@@ -185,12 +182,12 @@ const btnDinner = document.getElementById('dinner');
 btnDinner.addEventListener('click', urlListMealCategoryD);
 
 async function urlListMealCategoryD() {
+    item.innerHTML = '';
     let urlListMealCategory = await fetch("https://www.themealdb.com/api/json/v1/1/list.php?c=list");
     let dataCategory = await urlListMealCategory.json();
     randomCategoryDinner(dataCategory);
     console.log("urlList ", dataCategory);
 }
-
 
 function randomCategoryDinner(dataCategory) {
     let position3 = Math.floor(Math.random() * dataCategory.meals.length);
@@ -201,30 +198,30 @@ function randomCategoryDinner(dataCategory) {
     if (position4 == position3) {
         position4 = Math.floor(Math.random() * dataCategory.meals.length);
     }
-    let categogyMeal3 = dataCategory.meals[position3].strCategory;
-    let categogyMeal4 = dataCategory.meals[position4].strCategory;
+    let categoryMeal3 = dataCategory.meals[position3].strCategory;
+    let categoryMeal4 = dataCategory.meals[position4].strCategory;
 
-    if (categogyMeal3 == "Dessert" || categogyMeal3 == "Breakfast") {
+    if (categoryMeal3 == "Dessert" || categoryMeal3 == "Breakfast") {
         position3 = Math.floor(Math.random() * dataCategory.meals.length);
-        categogyMeal3 = dataCategory.meals[position3].strCategory;
+        categoryMeal3 = dataCategory.meals[position3].strCategory;
     }
-    if (categogyMeal4 == "Dessert" || categogyMeal4 == "Breakfast") {
+    if (categoryMeal4 == "Dessert" || categoryMeal4 == "Breakfast") {
         position4 = Math.floor(Math.random() * dataCategory.meals.length);
-        categogyMeal4 = dataCategory.meals[position4].strCategory;
+        categoryMeal4 = dataCategory.meals[position4].strCategory;
     }
-    console.log("meals", categogyMeal3, categogyMeal4);
-    urlDinner(categogyMeal3, categogyMeal4);
+    console.log("meals", categoryMeal3, categoryMeal4);
+    urlDinner(categoryMeal3, categoryMeal4);
 }
 
 
 
-async function urlDinner(categogyMeal3, categogyMeal4) {
-    console.log("toi", categogyMeal3, categogyMeal4);
+async function urlDinner(categoryMeal3, categoryMeal4) {
+    console.log("toi", categoryMeal3, categoryMeal4);
     const urlDinner1 = await fetch("https://www.themealdb.com/api/json/v1/1/filter.php?c=Dessert")
     const dataDinner1 = await urlDinner1.json();
-    const urlDinner2 = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${categogyMeal3}`)
+    const urlDinner2 = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${categoryMeal3}`)
     const dataDinner2 = await urlDinner2.json();
-    const urlDinner3 = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${categogyMeal4}`)
+    const urlDinner3 = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${categoryMeal4}`)
     const dataDinner3 = await urlDinner3.json();
     console.log(dataDinner1, dataDinner2, dataDinner3);
 
@@ -241,7 +238,7 @@ function showDinner(dataDinner1, dataDinner2, dataDinner3) {
     console.log(itemM.idMeal);
 
     if (itemM.length >= 3) {
-        item.innerHTML = ' ';
+        item.innerHTML = '';
     }
 
     let id1 = dataDinner1.meals[num1].idMeal;
@@ -268,7 +265,7 @@ function showDinner(dataDinner1, dataDinner2, dataDinner3) {
 <div class="img-container">
 <img src="${ dataDinner3.meals[num3].strMealThumb}" class='product-img' alt="3">
 <button class='detail-btn'>Detail<a href="../detail/detail.html?id=${id3}" class="text"></button>
-<h3>${dataDinner3.meals[num3].strMeal}</h3>i
+<h3>${dataDinner3.meals[num3].strMeal}</h3>
 </div>
 </article>`);
 

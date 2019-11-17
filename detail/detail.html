@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Alex+Brush|Mr+De+Haviland|Sacramento|Satisfy&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../recipes/footer.css">
     <script src="../search/script.js"></script>
     <script src="detail.js" defer></script>
     <link rel="stylesheet" href="./detail.css">
@@ -18,12 +19,8 @@
 
 <body>
     <header>
-        <!-- Nav bar -->
-        <nav class="nav-bar">
-            <!-- <div class="toggle">
-                    <i class="fas fa-bars menu" aria-hidden="true"></i>
-            </div> -->
-            <ul id='nav-content'>
+        <nav class="main">
+            <ul>
                 <li>
                     <a class="fab fa-instagram" href="https://www.instagram.com/foody.vn/" target="#"></a>
                 </li>
@@ -33,16 +30,15 @@
                 <li><a class="nav-content" href="/index.html">Home</a></li>
                 <li><a class="nav-content" href="../recipes/category.html">Recipes</a></li>
                 <li><a class="nav-content" href="../meals/meals.html">Meals</a></li>
-
             </ul>
         </nav>
         <div class="headerLogo">
-            <h1><a id="logo" href="../homePage/index.html">What The Food?</a></h1>
+            <h1>
+                <a id="logo" href="/index.html"><img src="https://cdn1.iconfinder.com/data/icons/social-messaging-ui-color-shapes/128/eat-circle-orange-512.png" alt=""> <span>What The Food ?</span></a>
+            </h1>
         </div>
-        <!--=================-->
-
     </header>
-
+    <hr>
     <div id="container">
         <div id='main'>
             <div id="foodDetail">
@@ -69,9 +65,36 @@
             </div>
         </div>
     </div>
-    <footer>
 
-    </footer>
 </body>
+<hr>
+<footer>
+    <div class="logo-footer">
+        <div>
+            <img src="https://cdn1.iconfinder.com/data/icons/social-messaging-ui-color-shapes/128/eat-circle-orange-512.png" alt="">
+            <a href="/index.html">What The Food ?</a>
+        </div>
+    </div>
+    <div class='website'>
+        <span>Favorite</span>
+        <a href="https://www.luxstay.com/vi/vietnam/lam-dong/da-lat">Pork</a>
+        <a href="https://www.luxstay.com/vi/vietnam/quang-nam/hoi-an">Goat</a>
+        <a href="https://www.luxstay.com/vi/vietnam/quang-nam/hoi-an">Beef</a>
+        <a href="https://www.luxstay.com/vi/vietnam/quang-nam/hoi-an">Pasta</a>
+    </div>
+    <div class='social'>
+        <span>Social</span>
+        <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i> Facebook</a>
+        <a href="Instagram.com"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="Twitter.com"><i class="fab fa-twitter"></i> Twitter</a>
+
+    </div>
+    <div class='contact-info'>
+        <span>About us</span>
+        <a><i class="fas fa-users"></i> H2Team</a>
+        <a><i class="far fa-envelope"></i> wtf@email.com</a>
+        <a><i class="fas fa-phone"></i> 012 345 7899</a>
+    </div>
+</footer>
 
 </html>
