@@ -250,7 +250,9 @@ ol{
     max-height: 270px;
 }
 @media only screen and (max-width: 700px){
+
     #nav-content{
+        float: none;
         line-height: 30px;
     }
     ul{
