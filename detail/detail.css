@@ -15,7 +15,6 @@ body {
     background-attachment: fixed;
     /* font-family: "Segoe UI Semibold"; */
 }
-
 hr {
     display: block;
     height: 1px;
@@ -276,17 +275,20 @@ ol {
 }
 
 @media only screen and (max-width: 700px) {
+    
     #nav-content {
-        margin-right: 90px;
         line-height: 30px;
     }
     .headerLogo h1 a {
         font-size: 60px;
         margin-left: 70px;
-    }
+    }   
     .recipe-img {
         background-color: #aaa;
         width: 100%;
+    }
+    ul{
+        padding: 0;
     }
     .form-control {
         width: 300px;
@@ -296,6 +298,9 @@ ol {
         color: palevioletred;
         font-size: 15px;
         /* margin-bottom: 16px; */
+    }
+    #main{
+        padding: 0;
     }
     input {
         height: 40px;
@@ -318,10 +323,10 @@ ol {
         display: none;
     }
     #main {
-        width: 100vw;
+        width: 95vw;
     }
     body {
-        width: 500px;
+        width: 400px;
         margin: auto;
     }
     ol {
