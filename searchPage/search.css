@@ -174,4 +174,13 @@ a {
         box-sizing: border-box;
         margin-left: 150px;
     }
+    body {
+        background-image: url(./pic/homepage.jpeg);
+        background-size: cover;
+        background-position: bottom;
+        background-attachment: fixed;
+    }
+    #main-supporting{
+        margin-top: 70px;
+    }
 }
