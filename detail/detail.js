@@ -2,7 +2,7 @@ const container = document.getElementById('container');
 const main = document.getElementById('main');
 const foodDetail = document.getElementById('foodDetail')
 const randomMeal = document.getElementById('randomMeal')
-
+let id = window.location.search.substring(4, 9);
 const randomUrl = `https://www.themealdb.com/api/json/v1/1/random.php`
 
 async function randomData() {
@@ -43,14 +43,13 @@ function createMainComment() {
      <input type="button" class="form-control button" id="btn" value="SEND">
  </div>
  <div id="comment">
-
  </div>
      `)
 }
 
 async function data() {
     createMainComment();
-    let id = window.location.search.substring(4, 9);
+
     const url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`;
     const conn = await fetch(url);
     const data = await conn.json();
@@ -107,7 +106,7 @@ let date = new Date();
 
 btn.addEventListener('click', () => {
     event.preventDefault();
-    let userKey = localStorage.getItem('user');
+    let userKey = localStorage.getItem(`${id}`);
     let valueName = input_name.value;
     let valueCmt = input_cmt.value;
     const valueTime = date.toDateString();
@@ -118,7 +117,7 @@ btn.addEventListener('click', () => {
     } else if (valueName != null && valueCmt != null) {
         if (userKey == null) {
             var data = [];
-            localStorage.setItem("user", JSON.stringify(data));
+            localStorage.setItem(`${id}`, JSON.stringify(data));
         }
         let person = {
 
@@ -127,9 +126,10 @@ btn.addEventListener('click', () => {
             time: valueTime
         }
 
-        var users = JSON.parse(localStorage.getItem("user"));
+        var users = JSON.parse(localStorage.getItem(`${id}`));
         users.push(person)
-        localStorage.setItem('user', JSON.stringify(users));
+        localStorage.setItem(`${id}`, JSON.stringify(users));
+
     }
     input_name.value = '';
     input_cmt.value = '';
@@ -137,9 +137,13 @@ btn.addEventListener('click', () => {
 })
 
 function RenderComment() {
-    var data_users = JSON.parse(localStorage.getItem("user"));
+    var data_users = JSON.parse(localStorage.getItem(`${id}`));
     console.log(data_users);
+    console.log(Object.keys(localStorage))
+
     for (let i = 0; i < data_users.length; i++) {
+
+
         data_user = data_users[i]
         console.log(data_user.time);
         const div_comment = `              
@@ -152,7 +156,6 @@ function RenderComment() {
                 <p>${data_user.comment}</p>
             </div>
         </div>
-
         </div>`
         comment.insertAdjacentHTML("beforeend", div_comment);
     }

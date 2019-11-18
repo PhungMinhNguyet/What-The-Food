@@ -201,11 +201,13 @@ a.fab.fa-youtube:hover {
 }
 
 .comment-author {
+    margin-left: 10px;
     font-weight: bold;
-    display: inline-block;
+    /* display: inline-block; */
     font-size: 20px;
     color: brown;
     margin-bottom: 5px;
+    margin-top: 3px;
 }
 
 .img-container-side img {
@@ -223,8 +225,9 @@ a.fab.fa-youtube:hover {
 }
 
 p {
+    margin: 10px;
     text-align: justify;
-    line-height: 30px;
+    /* line-height: 30px; */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
