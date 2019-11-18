@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: Century 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    /* font: "Segoe UI Semibold"; */
+    font: "Segoe UI Semibold";
 }
 
 header {
@@ -11,10 +11,9 @@ header {
 
 body {
     background-image: url(./pic/homepage.jpeg);
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
+    background-position: top;
+    background-attachment: contain;
 }
 
 ul {
@@ -72,7 +71,6 @@ a.btn:hover {
     font-family: 'Alex Brush', cursive;
     color: brown;
     font-size: 100px;
-    cursor: pointer;
 }
 
 .search-field {
@@ -110,7 +108,6 @@ a.btn:hover {
     flex-wrap: wrap;
     justify-content: space-around;
     margin-bottom: 100px;
-    top: 60%;
 }
 
 #container>.result {
@@ -153,7 +150,9 @@ a {
     font-size: 20px;
     font-weight: lighter;
 }
-
+.form-box{
+    text-align: center;
+}
 @media only screen and (max-width: 700px) {
     .title h1 {
         font-size: 55px;
@@ -174,5 +173,14 @@ a {
         text-align: center;
         box-sizing: border-box;
         margin-left: 150px;
+    }
+    body {
+        background-image: url(./pic/homepage.jpeg);
+        background-size: cover;
+        background-position: bottom;
+        background-attachment: fixed;
+    }
+    #main-supporting{
+        margin-top: 70px;
     }
 }

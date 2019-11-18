@@ -1,9 +1,7 @@
 /* Header */
-
-* {
+*{
     box-sizing: border-box;
 }
-
 body {
     /* background-image: url(/pictrure/homepage.jpeg); */
     background-color: #e6e1de;
@@ -13,15 +11,27 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    /* font-family: "Segoe UI Semibold"; */
+    font-family: "Segoe UI Semibold";
+}
+.headerLogo h1 a img {
+    width: 60px;
+    margin-right: 20px;
+}
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 3px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+    font-size: 10px;
 }
 
-.nav-bar {
+.nav-bar{
     max-width: 1200px;
     margin: auto;
     display: inline;
 }
-
 #nav-content {
     float: right;
     list-style-type: none;
@@ -31,7 +41,6 @@ body {
 ul li {
     display: inline-block;
 }
-
 #detailIngredient ol li {
     font: normal 300 16px/20px "Segoe UI", Helvetica, Arial, Sans-serif;
     line-height: 30px;
@@ -41,15 +50,14 @@ ul li {
 
 ul li a {
     text-decoration: none;
-    font-weight: normal;
+	font-weight: normal;
     color: brown;
     padding: 5px 20px;
     transition: 0.6s ease;
     font-size: 17px;
 }
 
-
-/* .headerLogo h1 {
+.headerLogo h1 {
     text-shadow: 2px 2px 0px #d5d5d5, 4px 4px 0px rgba(0, 0, 0, 0.2);
     font-family: 'Satisfy', cursive;
     font-family: 'Sacramento', cursive;
@@ -61,57 +69,37 @@ ul li a {
     width: 80%;
     cursor: pointer;
     margin-top: 30px;
-} */
-
-.headerLogo h1 span {
-    text-shadow: 2px 2px 0px #d5d5d5, 4px 4px 0px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    font-family: 'Satisfy', cursive;
-    font-family: 'Sacramento', cursive;
-    font-family: 'Mr De Haviland', cursive;
-    font-family: 'Alex Brush', cursive;
-    font-size: 70px;
+    text-align: left;
 }
-
-.headerLogo h1 a img {
-    width: 60px;
-    margin-right: 20px;
+.main{
+    display: inline-block;
+    align-items: center;
+    font-size: 1.3em;
+    float: right;
+    padding: 0 px;
 }
-
 .headerLogo h1 a {
-    font-size: 50px;
+    font-size: 100px;
     text-decoration: none;
     color: brown;
-    display: flex;
-    align-items: center;
+    
+}
+a.fab.fa-instagram:hover{
+    background-color: brown;
+    color: white;
+}
+a.fab.fa-youtube:hover{
+    background-color:brown;
+    color: white;
 }
 
-.headerLogo h1 {
-    text-shadow: 2px 2px 0px #d5d5d5, 4px 4px 0px rgba(0, 0, 0, 0.2);
-    font-family: 'Alex Brush', cursive;
-    line-height: 70px;
-    font-size: 70px;
-    cursor: pointer;
-    display: inline;
-}
-
-.headerLogo {
+.headerLogo{
     text-align: center;
 }
 
-header {
-    width: 80%;
+header{
+    width:100%;
     margin: auto;
-    justify-content: space-between;
-    padding-top: 10px;
-}
-
-.main {
-    display: block;
-    text-align: center;
-    /* font-size: 1.3em; */
-    float: right;
-    /* padding: 0 px; */
 }
 
 .nav-icon {
@@ -124,32 +112,9 @@ header {
     font-size: 30px;
 }
 
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 3px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
-    font-size: 10px;
-}
-
-a.fab.fa-instagram:hover {
-    background-color: brown;
-    color: white;
-}
-
-a.fab.fa-youtube:hover {
-    background-color: brown;
-    color: white;
-}
-
-
 /* ============= */
 
-
 /* Recipe detail */
-
 #container {
     display: flex;
     flex-wrap: wrap;
@@ -171,8 +136,9 @@ a.fab.fa-youtube:hover {
     margin: 1px;
 }
 
+
 .side {
-    flex: 30%;
+    flex:30%;
     /* background-color: #f1f1f1; */
     padding: 20px;
     max-width: 300px;
@@ -184,7 +150,6 @@ a.fab.fa-youtube:hover {
     height: 500px;
     display: inline-block;
 }
-
 .comment-line img {
     margin-top: 20px;
     width: 2rem;
@@ -201,50 +166,44 @@ a.fab.fa-youtube:hover {
 }
 
 .comment-author {
-    margin-left: 10px;
     font-weight: bold;
-    /* display: inline-block; */
+    display: inline-block;
     font-size: 20px;
     color: brown;
     margin-bottom: 5px;
-    margin-top: 3px;
+    margin-top:10px;
 }
 
 .img-container-side img {
     width: 100%;
 }
-
 .recipe-img {
     background-color: #aaa;
     width: 80%;
     height: 80%;
 }
-
-.recipe-img:hover {
+.recipe-img:hover{
     opacity: 0.8;
 }
 
 p {
-    margin: 10px;
     text-align: justify;
-    /* line-height: 30px; */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 30px;
+    font-family:  'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-footer {
+footer{
     background-color: white;
 }
 
 
 /* Comment */
-
 .contact-form {
-    margin-top: 20px;
+    margin-top:50px;
 }
 
-.form-control-cmt,
-.form-control-name {
-    width: 100%;
+.form-control {
+    width: 100%; 
     background: white;
     border: 1px solid black;
     border-bottom: 1px solid grey;
@@ -255,10 +214,9 @@ footer {
 
 .form-control-name {
     background-color: silver;
-    height: 20px;
 }
 
-.form-control-cmt {
+.form-control-cmt{
     height: 40px;
 }
 
@@ -276,72 +234,54 @@ footer {
     background-color: peru;
     cursor: pointer;
 }
-
-#intro-food {
+#intro-food{
     text-decoration: none;
     color: #545454;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family:  'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
-#side-bar {
+#side-bar{
     padding: 5px;
 }
-
-#side-bar img:hover {
+#side-bar img:hover{
     opacity: 0.8;
 }
-
-#hix {
-    color: black;
+#hix{
+    color: black; 
     text-decoration: none;
 }
-
-#hix:hover {
+#hix:hover{
     text-decoration: underline;
 }
-
-ol li:first-letter {
-    text-transform: capitalize
+ol li:first-letter{
+    text-transform: capitalize 
 }
-
-ol {
-    display: flex;
+ol{
+    display: flex; 
     flex-flow: wrap column;
     max-height: 270px;
 }
+@media only screen and (max-width: 480px){
 
-@media only screen and (max-width: 480px) {
-    #nav-content {
+    #nav-content{
         float: none;
         line-height: 30px;
     }
-    header {
-        flex-direction: column-reverse;
+    ul{
+        padding : 0px;
+        text-align: center;
+        margin-right: 15px;
     }
-    .main {
-        margin: 0px auto;
-        font-size: 30px;
+    ul li a {
+        padding: 15px;
     }
-    body {
-        width: 100vh;
-    }
-    .headerLogo {
-        margin-top: 30px;
-    }
-    #logo {
-        margin-top: 40px;
-        display: inline-flex;
-        flex-direction: column;
-    }
-    .headerLogo h1 a img {
-        margin-bottom: 20px;
-        width: 80px;
-        margin-right: 0;
+    .headerLogo h1 a {
+        font-size: 60px;
+        margin-left: 70px;
     }
     .recipe-img {
         background-color: #aaa;
         width: 95%;
-        height: 80%;
+        height:80%;
     }
     .form-control {
         width: 300px;
@@ -356,7 +296,7 @@ ol {
         height: 40px;
     }
     .button {
-        background: #4267b2;
+        background:#4267b2;
         border-color: transparent;
         color: wheat;
         font-weight: bold;
@@ -365,47 +305,49 @@ ol {
         height: 40px;
         /* margin-top: 20px; */
     }
-    .side {
+    .button:hover {
+        background-color: peru;
+        cursor: pointer;
+    }
+    .side{
         display: none;
     }
-    #main {
+    #main{
         width: 100vw;
         padding: 0px;
     }
-    #instruction {
+    #instruction{
         width: 90vw;
         margin: auto;
     }
-    /* body {
-        width: 400px;
+    body{
+        width:400px;
         margin: auto;
-    } */
-    /* ol {
-        display: flex;
+    }
+    ol{
+        display: flex; 
         flex-flow: wrap column;
         max-height: 300px;
-    } */
-    #foody {
+    }
+    hr{
+        display: none;
+    }
+    #foody{
         display: flex;
         flex-wrap: wrap;
     }
-    #comment {
-        box-sizing: border-box;
-    }
-    .comment-line {
-        padding: 15px;
-    }
-    #foody {
-        display: flex;
-    }
-    a.nav-content:hover {
-        background-color: brown;
-        color: white;
-    }
-    footer {
-        font-size: 26px;
-    }
-    .website {
-        display: none;
-    }
+
+}
+#comment{
+    box-sizing: border-box;
+}
+.comment-line {
+    padding: 15px;   
+}
+#foody{
+    display: flex;
+}
+a.nav-content:hover {
+    background-color: brown;
+    color: white;
 }
