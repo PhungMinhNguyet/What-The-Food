@@ -19,7 +19,7 @@ body {
 .main {
     display: flex;
     align-items: center;
-    font-size: 1.3em;
+    /* font-size: 1.3em; */
 }
 
 ul {

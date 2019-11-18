@@ -19,12 +19,13 @@ body {
 .main {
     display: flex;
     align-items: center;
-    font-size: 1.3em;
+    /* font-size: 1.3em; */
 }
 
 ul {
-    display: flex;
+    float: right;
     list-style-type: none;
+    margin-top: 25px;
 }
 
 ul li {
