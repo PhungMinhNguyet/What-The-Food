@@ -34,7 +34,7 @@ function showBreakfast(dataBre) {
     
         <div class="img-container" id="${id}">
         <img src="${ dataBre.meals[num].strMealThumb}" class='product-img' alt="">
-             <button class='detail-btn'>Detail<a href="../detail/detail.html?id=${id}" class="text"></button>
+             <button class='detail-btn'><a href="../detail/detail.html?id=${id}" class="text">Detail</button>
         <h3>${dataBre.meals[num].strMeal}</h3>
         </div>
     
@@ -76,7 +76,7 @@ function showBrunch(dataBrunch) {
         `<article class='product'>
 <div class="img-container">
     <img src="${ dataBrunch.meals[num].strMealThumb}" class='product-img' alt="">
-    <button class='detail-btn'>Detail<a href="../detail/detail.html?id=${id}" class="text"></button>
+    <button class='detail-btn'><a href="../detail/detail.html?id=${id}" class="text">Detail</button>
     <h3>${dataBrunch.meals[num].strMeal}</h3>
 </div>
 </article>`);
@@ -153,7 +153,7 @@ function showLunch(dataLunch1, dataLunch2, dataLunch3) {
         `<article class='product'>
 <div class="img-container">
 <img src="${ dataLunch1.meals[num1].strMealThumb}" class='product-img' alt="1">
-<button class='detail-btn'>Detail<a href="../detail/detail.html?id=${id1}" class="text"></button>
+<button class='detail-btn'><a href="../detail/detail.html?id=${id}" class="text">Detail</button>
 <h3>${dataLunch1.meals[num1].strMeal}</h3>
 </div>
 </article>`);
@@ -161,7 +161,7 @@ function showLunch(dataLunch1, dataLunch2, dataLunch3) {
         `<article class='product'>
 <div class="img-container">
 <img src="${ dataLunch2.meals[num2].strMealThumb}" class='product-img' alt="2">
-<button class='detail-btn'>Detail<a href="../detail/detail.html?id=${id2}" class="text"></button>
+<button class='detail-btn'><a href="../detail/detail.html?id=${id}" class="text">Detail</button>
 <h3>${dataLunch2.meals[num2].strMeal}</h3>
 </div>
 </article>`);
@@ -169,7 +169,7 @@ function showLunch(dataLunch1, dataLunch2, dataLunch3) {
         `<article class='product'>
 <div class="img-container">
 <img src="${ dataLunch3.meals[num3].strMealThumb}" class='product-img' alt="3">
-<button class='detail-btn'>Detail<a href="../detail/detail.html?id=${id3}" class="text"></button>
+<button class='detail-btn'><a href="../detail/detail.html?id=${id}" class="text">Detail</button>
 <h3>${dataLunch3.meals[num3].strMeal}</h3>
 </div>
 </article>`);
@@ -248,7 +248,7 @@ function showDinner(dataDinner1, dataDinner2, dataDinner3) {
         `<article class='product'>
 <div class="img-container">
 <img src="${ dataDinner1.meals[num1].strMealThumb}" class='product-img' alt="1">
-<button class='detail-btn'>Detail<a href="../detail/detail.html?id=${id1}" class="text"></button>
+<button class='detail-btn'><a href="../detail/detail.html?id=${id}" class="text">Detail</button>
 <h3>${dataDinner1.meals[num1].strMeal}</h3>
 </div>
 </article>`);
@@ -256,7 +256,7 @@ function showDinner(dataDinner1, dataDinner2, dataDinner3) {
         `<article class='product'>
 <div class="img-container">
 <img src="${ dataDinner2.meals[num2].strMealThumb}" class='product-img' alt="2">
-<button class='detail-btn'>Detail<a href="../detail/detail.html?id=${id2}" class="text"></button>
+<button class='detail-btn'><a href="../detail/detail.html?id=${id}" class="text">Detail</button>
 <h3>${dataDinner2.meals[num2].strMeal}</h3>
 </div>
 </article>`);
@@ -264,7 +264,7 @@ function showDinner(dataDinner1, dataDinner2, dataDinner3) {
         `<article class='product'>
 <div class="img-container">
 <img src="${ dataDinner3.meals[num3].strMealThumb}" class='product-img' alt="3">
-<button class='detail-btn'>Detail<a href="../detail/detail.html?id=${id3}" class="text"></button>
+<button class='detail-btn'><a href="../detail/detail.html?id=${id}" class="text">Detail</button>
 <h3>${dataDinner3.meals[num3].strMeal}</h3>
 </div>
 </article>`);
