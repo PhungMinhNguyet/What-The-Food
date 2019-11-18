@@ -57,6 +57,7 @@ a.nav-content:hover {
     line-height: 70px;
     font-size: 70px;
     cursor: pointer;
+    display: inline;
 }
 
 .headerLogo h1 span {
