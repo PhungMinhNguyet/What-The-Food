@@ -13,16 +13,21 @@ footer span {
 }
 
 .logo-footer img {
-    width: 75px;
+    width: 70px;
 }
 
 .logo-footer a {
-    font-size: 1.5em;
+    font-size: 50px;
     text-decoration: none;
     color: brown;
     border: transparent;
     margin-left: 15px;
     text-shadow: 2px 2px 0px #d5d5d5, 4px 4px 0px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    font-family: 'Satisfy', cursive;
+    font-family: 'Sacramento', cursive;
+    font-family: 'Mr De Haviland', cursive;
+    font-family: 'Alex Brush', cursive;
 }
 
 footer .logo-footer {
