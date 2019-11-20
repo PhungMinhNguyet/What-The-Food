@@ -178,6 +178,7 @@ ul {
 }
 
 .comment-line img {
+    display: list-item;
     margin-top: 20px;
     width: 2rem;
     height: 2rem;
@@ -186,10 +187,10 @@ ul {
 }
 
 .comment-area {
-    margin-top: 20px;
+    margin-top: 10px;
     margin-left: 20px;
     background-color: rgba(192, 192, 192, 0.76);
-    padding: 7px;
+    padding: 5px;
 }
 
 .comment-author {
@@ -198,7 +199,7 @@ ul {
     font-size: 20px;
     color: brown;
     margin-bottom: 5px;
-    margin-top: 10px;
+    /* margin-top: 10px;*/
 }
 
 .img-container-side img {
@@ -216,8 +217,9 @@ ul {
 }
 
 p {
+    margin: 3px;
     text-align: justify;
-    line-height: 30px;
+    /* line-height: 30px; */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -230,7 +232,7 @@ p {
 /* Comment */
 
 .contact-form {
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 .form-control {
