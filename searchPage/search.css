@@ -150,18 +150,24 @@ a {
     font-size: 20px;
     font-weight: lighter;
 }
-.form-box{
+
+.form-box {
     text-align: center;
 }
-@media only screen and (max-width: 700px) {
+
+@media only screen and (max-width: 480px) {
     .title h1 {
-        font-size: 55px;
+        font-size: 50px;
         cursor: pointer;
         text-align: center;
     }
-    ul {
-        text-align: center;
-        margin-right: 20px;
+    ul li a {
+        text-decoration: none;
+        color: brown;
+        padding: 5px 10px;
+        border: transparent;
+        transition: 0.6s ease;
+        size: 5px;
     }
     .search-field {
         width: 300px;
@@ -180,7 +186,7 @@ a {
         background-position: bottom;
         background-attachment: fixed;
     }
-    #main-supporting{
+    #main-supporting {
         margin-top: 70px;
     }
 }
